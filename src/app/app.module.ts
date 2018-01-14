@@ -9,7 +9,6 @@ import { HomeModule } from '../pages/home/home.module';
 import { TabsModule } from '../pages/tabs/tabs.module';
 import { GoogleMapsModule } from '../pages/google-maps/google-maps.module';
 import { WordpressModule } from '../pages/wordpress/wordpress.module';
-import { SlidesModule } from '../pages/slides/slides.module';
 import { GridModule } from '../pages/grid/grid.module';
 import { SettingsModule } from '../pages/settings/settings.module';
 import { FeedsModule } from '../pages/feeds/feeds.module';
@@ -38,7 +37,6 @@ import { MyApp } from './app.component';
     TabsModule,
     GoogleMapsModule,
     WordpressModule,
-    SlidesModule,
     GridModule,
     SettingsModule,
     FeedsModule,

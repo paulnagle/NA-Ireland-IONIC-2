@@ -10,7 +10,6 @@ import { WordpressFavorites } from '../../wordpress/wordpress-favorites/wordpres
 import { WordpressPages } from '../../wordpress/wordpress-pages/wordpress-pages.component';
 import { WordpressPage } from '../../wordpress/wordpress-page/wordpress-page.component';
 import { WordpressMenus } from '../../wordpress/wordpress-menus/wordpress-menus.component';
-import { SlidesComponent } from '../../slides/slides-component/slides.component';
 import { FeedCategoriesComponent } from '../../feeds/feed-categories/feed-categories.component';
 import { FeedCategoryComponent } from '../../feeds/feed-category/feed-category.component';
 import { YoutubeVideosComponent } from '../../youtube/youtube-videos/youtube-videos.component';
@@ -41,7 +40,6 @@ export class HomeComponent {
 	      { title: 'PAGES', component: WordpressPages, icon: 'document', note: 'Wordpress' },
 				{ title: 'PAGE', component: WordpressPage, icon: 'document', note: 'Wordpress', params: { id: 2 }},
 	      { title: 'MENUS', component: WordpressMenus, icon: 'menu', note: 'Wordpress' },
-	      { title: 'SLIDES', component: SlidesComponent, icon: 'images', note: 'Welcome Tour' },
 	      { title: 'FEEDS', component: FeedCategoriesComponent, icon: 'logo-rss', note: 'RSS (YQL)' },
 	      { title: 'FEED_CATEGORY', component: FeedCategoryComponent, icon: 'logo-rss', note: 'RSS (YQL)' },
 	      { title: 'YOUTUBE_VIDEOS', component: YoutubeVideosComponent, icon: 'logo-youtube', note: 'Youtube' },
