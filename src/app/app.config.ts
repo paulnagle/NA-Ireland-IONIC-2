@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Config {
-	public wordpressApiUrl = 'http://mobile-apps.today/products/ionic/woocommerce-api/wp-json';
+	public wordpressApiUrl = 'http://www.na-ireland.org/wp-json';
 	// public wordpressApiUrl = 'http://demo.wp-api.org/wp-json'
 	public wordpressMenusNavigation = false;
 	public feedsUrl = './assets/data/feeds.json';
