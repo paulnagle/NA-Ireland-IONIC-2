@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Meetings Map
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <agm-map
+      [latitude]="latitude"
+      [longitude]="longitude"
+      [zoom]="zoom"
+      [disableDefaultUI]="false"
+      [zoomControl]="true">
+
+      <agm-marker
+          *ngFor="let marker of markers; let i = index"
+          [latitude]="marker.latitude"
+          [longitude]="marker.longitude"
+          [label]="marker.label">
+        <agm-info-window>
+          <strong>{{marker.description}}</strong>
+        </agm-info-window>
+      </agm-marker>
+
+    </agm-map>
+</ion-content>
