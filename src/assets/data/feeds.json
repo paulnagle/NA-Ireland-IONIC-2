@@ -2,71 +2,113 @@
   "categories": [
     {
       "id": 1,
-      "title": "News",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "title": "Dublin",
+      "description": "Belfast, Donegal, Fermanagh, Antrim etc",
       "icon": "cloud",
       "items": [
         {
           "id": 1,
-          "title": "The Guardian",
-          "description": "The Guardian is a British national daily newspaper. Founded in 1821, it was known as The Manchester Guardian until 1959.",
+          "title": "Monday",
+          "description": "NA Meetings in Dublin on a Monday",
           "url": "http://www.theguardian.com/world/rss"
         },
         {
           "id": 2,
-          "title": "Huffington Post",
-          "description": "The Huffington Post is an American online news aggregator and blog.",
+          "title": "Tuesday",
+          "description": "NA Meetings in Dublin on a Tuesday",
           "url": "http://www.huffingtonpost.com/feeds/news.xml"
         },
         {
           "id": 3,
-          "title": "BBC News",
-          "description": "BBC News is an operational business division[1] of the British Broadcasting Corporation (BBC) responsible for the gathering and broadcasting of news and current affairs.",
+          "title": "Wednesday",
+          "description": "NA Meetings in Dublin on a Wednesday",
           "url": "http://feeds.bbci.co.uk/news/rss.xml"
         },
         {
           "id": 4,
-          "title": "Apple Hot News",
-          "description": "Apple Inc. is an American multinational corporation.",
+          "title": "Thursday",
+          "description": "NA Meetings in Dublin on a Thursday",
           "url": "https://www.apple.com/main/rss/hotnews/hotnews.rss"
         },
         {
           "id": 5,
-          "title": "Apple Developer News",
-          "description": "Apple Inc. is an American multinational corporation.",
+          "title": "Friday",
+          "description": "NA Meetings in Dublin on a Friday",
+          "url": "https://developer.apple.com/news/rss/news.rss"
+        },
+        {
+          "id": 6,
+          "title": "Saturday",
+          "description": "NA Meetings in Dublin on a Saturday",
+          "url": "https://developer.apple.com/news/rss/news.rss"
+        },
+        {
+          "id": 7,
+          "title": "Sunday",
+          "description": "NA Meetings in Dublin on a Sunday",
           "url": "https://developer.apple.com/news/rss/news.rss"
         }
       ]
     },
     {
       "id": 2,
-      "title": "Sports",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "icon": "basketball",
+      "title": "Cork",
+      "description": "NA Meetings in Cork",
+      "icon": "cloud",
       "items": [
         {
           "id": 1,
-          "title": "BBC Sport - Front Page",
-          "description": "This is an RSS feed from the BBC Sport - Sport website.",
-          "url": "http://feeds.bbci.co.uk/sport/0/rss.xml?edition=uk"
+          "title": "Monday",
+          "description": "NA Meetings in Cork on a Monday",
+          "url": "http://www.theguardian.com/world/rss"
         },
         {
           "id": 2,
-          "title": "BBC Sport - Football",
-          "description": "This is an RSS feed from the BBC Sport - Football website.",
-          "url": "http://feeds.bbci.co.uk/sport/0/football/rss.xml?edition=uk"
+          "title": "Tuesday",
+          "description": "NA Meetings in Cork on a Tuesday",
+          "url": "http://www.huffingtonpost.com/feeds/news.xml"
+        },
+        {
+          "id": 3,
+          "title": "Wednesday",
+          "description": "NA Meetings in Cork on a Wednesday",
+          "url": "http://feeds.bbci.co.uk/news/rss.xml"
+        },
+        {
+          "id": 4,
+          "title": "Thursday",
+          "description": "NA Meetings in Cork on a Thursday",
+          "url": "https://www.apple.com/main/rss/hotnews/hotnews.rss"
+        },
+        {
+          "id": 5,
+          "title": "Friday",
+          "description": "NA Meetings in Cork on a Friday",
+          "url": "https://developer.apple.com/news/rss/news.rss"
+        },
+        {
+          "id": 6,
+          "title": "Saturday",
+          "description": "NA Meetings in Cork on a Saturday",
+          "url": "https://developer.apple.com/news/rss/news.rss"
+        },
+        {
+          "id": 7,
+          "title": "Sunday",
+          "description": "NA Meetings in Cork on a Sunday",
+          "url": "https://developer.apple.com/news/rss/news.rss"
         }
       ]
     },
     {
       "id": 3,
-      "title": "Economy",
+      "title": "Eastern Area",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
       "icon": "card",
       "items": [
         {
           "id": 1,
-          "title": "The Economist",
+          "title": "Dublin",
           "description": "The Economist is an English-language weekly newspaper owned by The Economist Newspaper Ltd and edited in offices in London.",
           "url": "http://www.economist.com/topics/economics/index.xml"
         },
@@ -80,7 +122,7 @@
     },
     {
       "id": 4,
-      "title": "Media",
+      "title": "Western Area",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
       "icon": "videocam",
       "items": [

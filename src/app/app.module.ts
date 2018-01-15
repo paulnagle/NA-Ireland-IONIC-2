@@ -9,14 +9,16 @@ import { HomeModule } from '../pages/home/home.module';
 import { TabsModule } from '../pages/tabs/tabs.module';
 import { GoogleMapsModule } from '../pages/google-maps/google-maps.module';
 import { WordpressModule } from '../pages/wordpress/wordpress.module';
-import { GridModule } from '../pages/grid/grid.module';
 import { SettingsModule } from '../pages/settings/settings.module';
 import { FeedsModule } from '../pages/feeds/feeds.module';
 import { AboutModule } from '../pages/about/about.module';
 import { ContactModule } from '../pages/contact/contact.module';
 import { DatetimeModule } from '../pages/datetime/datetime.module';
 // Module Example: Use the PlaceholderModule for any new App Module
-import { PlaceholderModule } from '../pages/placeholder/placeholder.module';
+import { PlaceholderModule }  from '../pages/placeholder/placeholder.module';
+import { JustfortodayModule } from '../pages/justfortoday/justfortoday.module';
+import { SpeakersModule }     from '../pages/speakers/speakers.module';
+
 
 import { MyApp } from './app.component';
 
@@ -31,12 +33,13 @@ import { MyApp } from './app.component';
     TabsModule,
     GoogleMapsModule,
     WordpressModule,
-    GridModule,
     SettingsModule,
     FeedsModule,
     AboutModule,
     ContactModule,
     DatetimeModule,
+    JustfortodayModule,
+    SpeakersModule,
     PlaceholderModule
   ],
   bootstrap: [IonicApp],

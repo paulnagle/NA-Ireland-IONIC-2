@@ -11,7 +11,11 @@ import { DatetimeComponent } from '../pages/datetime/datetime-component/datetime
 import { SettingsComponent } from '../pages/settings/settings-component/settings.component';
 import { GoogleMapsComponent } from '../pages/google-maps/google-maps-component/google-maps.component';
 import { PlaceholderComponent } from '../pages/placeholder/placeholder-component/placeholder.component';
+import { JustfortodayComponent } from '../pages/justfortoday/justfortoday-component/justfortoday.component';
+import { SpeakersComponent } from '../pages/speakers/speakers-component/speakers.component';
 import { WordpressPosts } from '../pages/wordpress/wordpress-posts/wordpress-posts.component';
+import { ContactComponent } from '../pages/contact/contact-component/contact.component';
+import { FeedCategoriesComponent  } from '../pages/feeds/feed-categories/feed-categories.component';
 
 @Component({
 	templateUrl: './app.html'
@@ -50,7 +54,11 @@ export class MyApp {
 			{ title: 'POSTS', component: WordpressPosts, icon: 'logo-wordpress'},
 			{ title: 'GOOGLE_MAPS', component: GoogleMapsComponent, icon: 'map'},
 			{ title: 'PLACEHOLDER', component: PlaceholderComponent, icon: 'logo-buffer' },
+			{ title: 'JUSTFORTODAY', component: JustfortodayComponent, icon: 'calendar' },
 	    { title: 'DATETIME', component: DatetimeComponent, icon: 'clock'},
+			{ title: 'SPEAKERS', component: SpeakersComponent, icon: 'mic'},
+			{ title: 'CONTACT', component: ContactComponent, icon: 'contact'},
+			{ title: 'FEEDCATEGORIES', component: FeedCategoriesComponent, icon: 'contact'},
 		];
 	}
 
