@@ -11,6 +11,7 @@ import { DatetimeComponent } from '../pages/datetime/datetime-component/datetime
 import { SettingsComponent } from '../pages/settings/settings-component/settings.component';
 import { GoogleMapsComponent } from '../pages/google-maps/google-maps-component/google-maps.component';
 import { PlaceholderComponent } from '../pages/placeholder/placeholder-component/placeholder.component';
+import { JustfortodayComponent } from '../pages/justfortoday/justfortoday-component/justfortoday.component';
 import { WordpressPosts } from '../pages/wordpress/wordpress-posts/wordpress-posts.component';
 
 @Component({
@@ -50,6 +51,7 @@ export class MyApp {
 			{ title: 'POSTS', component: WordpressPosts, icon: 'logo-wordpress'},
 			{ title: 'GOOGLE_MAPS', component: GoogleMapsComponent, icon: 'map'},
 			{ title: 'PLACEHOLDER', component: PlaceholderComponent, icon: 'logo-buffer' },
+			{ title: 'JUSTFORTODAY', component: JustfortodayComponent, icon: 'calendar' },
 	    { title: 'DATETIME', component: DatetimeComponent, icon: 'clock'},
 		];
 	}

@@ -16,6 +16,7 @@ import { ContactModule } from '../pages/contact/contact.module';
 import { DatetimeModule } from '../pages/datetime/datetime.module';
 // Module Example: Use the PlaceholderModule for any new App Module
 import { PlaceholderModule } from '../pages/placeholder/placeholder.module';
+import { JustfortodayModule } from '../pages/justfortoday/justfortoday.module';
 
 import { MyApp } from './app.component';
 
@@ -35,6 +36,7 @@ import { MyApp } from './app.component';
     AboutModule,
     ContactModule,
     DatetimeModule,
+    JustfortodayModule,
     PlaceholderModule
   ],
   bootstrap: [IonicApp],
