@@ -15,7 +15,6 @@ import { FeedsModule } from '../pages/feeds/feeds.module';
 import { AboutModule } from '../pages/about/about.module';
 import { ContactModule } from '../pages/contact/contact.module';
 import { DatetimeModule } from '../pages/datetime/datetime.module';
-import { ActionSheetModule } from '../pages/action-sheet/action-sheet.module';
 // Module Example: Use the PlaceholderModule for any new App Module
 import { PlaceholderModule } from '../pages/placeholder/placeholder.module';
 
@@ -38,7 +37,6 @@ import { MyApp } from './app.component';
     AboutModule,
     ContactModule,
     DatetimeModule,
-    ActionSheetModule,
     PlaceholderModule
   ],
   bootstrap: [IonicApp],
