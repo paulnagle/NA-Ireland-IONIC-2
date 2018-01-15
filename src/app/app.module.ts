@@ -15,8 +15,10 @@ import { AboutModule } from '../pages/about/about.module';
 import { ContactModule } from '../pages/contact/contact.module';
 import { DatetimeModule } from '../pages/datetime/datetime.module';
 // Module Example: Use the PlaceholderModule for any new App Module
-import { PlaceholderModule } from '../pages/placeholder/placeholder.module';
+import { PlaceholderModule }  from '../pages/placeholder/placeholder.module';
 import { JustfortodayModule } from '../pages/justfortoday/justfortoday.module';
+import { SpeakersModule }     from '../pages/speakers/speakers.module';
+
 
 import { MyApp } from './app.component';
 
@@ -37,6 +39,7 @@ import { MyApp } from './app.component';
     ContactModule,
     DatetimeModule,
     JustfortodayModule,
+    SpeakersModule,
     PlaceholderModule
   ],
   bootstrap: [IonicApp],
