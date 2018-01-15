@@ -27,7 +27,6 @@ export class HomeComponent {
 	ngOnInit() {
 	  	this.pages = [
 	      { title: 'ABOUT', component: AboutComponent, icon: 'photos', note: '' },
-	      { title: 'LOGIN', component: WordpressHome, icon: 'log-in', note: 'Wordpress' },
 	      { title: 'POSTS', component: WordpressPosts, icon: 'logo-wordpress', note: 'Wordpress' },
 	      { title: 'CATEGORIES', component: WordpressCategories, icon: 'pricetags', note: 'Wordpress' },
 	      { title: 'TAGS', component: WordpressTags, icon: 'pricetags', note: 'Wordpress' },
