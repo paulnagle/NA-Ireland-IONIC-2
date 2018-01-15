@@ -12,7 +12,6 @@ import { WordpressModule } from '../pages/wordpress/wordpress.module';
 import { GridModule } from '../pages/grid/grid.module';
 import { SettingsModule } from '../pages/settings/settings.module';
 import { FeedsModule } from '../pages/feeds/feeds.module';
-import { YoutubeModule } from '../pages/youtube/youtube.module';
 import { AboutModule } from '../pages/about/about.module';
 import { ContactModule } from '../pages/contact/contact.module';
 import { DatetimeModule } from '../pages/datetime/datetime.module';
@@ -39,7 +38,6 @@ import { MyApp } from './app.component';
     GridModule,
     SettingsModule,
     FeedsModule,
-    YoutubeModule,
     AboutModule,
     ContactModule,
     DatetimeModule,

@@ -12,8 +12,6 @@ import { WordpressPage } from '../../wordpress/wordpress-page/wordpress-page.com
 import { WordpressMenus } from '../../wordpress/wordpress-menus/wordpress-menus.component';
 import { FeedCategoriesComponent } from '../../feeds/feed-categories/feed-categories.component';
 import { FeedCategoryComponent } from '../../feeds/feed-category/feed-category.component';
-import { YoutubeVideosComponent } from '../../youtube/youtube-videos/youtube-videos.component';
-import { YoutubeChannelComponent } from '../../youtube/youtube-channel/youtube-channel.component';
 import { ChartsComponent } from '../../charts/charts-component/charts.component';
 
 @Component({
@@ -41,8 +39,6 @@ export class HomeComponent {
 	      { title: 'MENUS', component: WordpressMenus, icon: 'menu', note: 'Wordpress' },
 	      { title: 'FEEDS', component: FeedCategoriesComponent, icon: 'logo-rss', note: 'RSS (YQL)' },
 	      { title: 'FEED_CATEGORY', component: FeedCategoryComponent, icon: 'logo-rss', note: 'RSS (YQL)' },
-	      { title: 'YOUTUBE_VIDEOS', component: YoutubeVideosComponent, icon: 'logo-youtube', note: 'Youtube' },
-	      { title: 'YOUTUBE_CHANNEL', component: YoutubeChannelComponent, icon: 'logo-youtube', note: 'Youtube' },
 	      { title: 'CHARTS', component: ChartsComponent, icon: 'pie', note: 'Chart.js' }
 	    ];
 
