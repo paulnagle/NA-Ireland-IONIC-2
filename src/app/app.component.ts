@@ -21,7 +21,7 @@ export class MyApp {
 
 	rootPage = TabsComponent;
 	pages: Array<{title: string, component: any, icon: string}>;
-	wordpressMenusNavigation: boolean = false;
+
 
 	constructor(
 		private platform: Platform,

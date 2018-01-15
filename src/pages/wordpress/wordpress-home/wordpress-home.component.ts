@@ -7,7 +7,6 @@ import { WordpressPosts } from '../wordpress-posts/wordpress-posts.component';
 import { WordpressCategories } from '../wordpress-categories/wordpress-categories.component';
 import { WordpressFavorites } from '../wordpress-favorites/wordpress-favorites.component';
 import { WordpressPages } from '../wordpress-pages/wordpress-pages.component';
-import { WordpressMenus } from '../wordpress-menus/wordpress-menus.component';
 
 @Component({
   templateUrl: 'wordpress-home.html'
@@ -26,7 +25,6 @@ export class WordpressHome {
 	ngOnInit() {
 		this.getUser();
 	  	this.pages = [
-	  	  { title: 'MENUS', component: WordpressMenus, icon: 'menu', note: 'Wordpress' },
 	      { title: 'POSTS', component: WordpressPosts, icon: 'logo-wordpress', note: 'Wordpress' },
 	      { title: 'CATEGORIES', component: WordpressCategories, icon: 'pricetags', note: 'Wordpress' },
 	      { title: 'FAVORITES', component: WordpressFavorites, icon: 'heart', note: 'Wordpress (Storage)' },

@@ -11,9 +11,7 @@ import { WordpressTags } from './wordpress-tags/wordpress-tags.component';
 import { WordpressFavorites } from './wordpress-favorites/wordpress-favorites.component';
 import { WordpressPages } from './wordpress-pages/wordpress-pages.component';
 import { WordpressPage } from './wordpress-page/wordpress-page.component';
-import { WordpressMenus } from './wordpress-menus/wordpress-menus.component';
-import { WordpressMenu } from './wordpress-menu/wordpress-menu.component';
-import { WordpressMenuItem } from './wordpress-menu-item/wordpress-menu-item.component';
+
 
 @NgModule({
   declarations: [
@@ -26,10 +24,7 @@ import { WordpressMenuItem } from './wordpress-menu-item/wordpress-menu-item.com
     WordpressTags,
     WordpressFavorites,
     WordpressPages,
-    WordpressPage,
-    WordpressMenus,
-    WordpressMenu,
-    WordpressMenuItem
+    WordpressPage
   ],
   imports: [
   	CommonModule,
@@ -45,10 +40,7 @@ import { WordpressMenuItem } from './wordpress-menu-item/wordpress-menu-item.com
     WordpressTags,
     WordpressFavorites,
     WordpressPages,
-    WordpressPage,
-    WordpressMenus,
-    WordpressMenu,
-    WordpressMenuItem
+    WordpressPage
   ],
   entryComponents:[
     WordpressHome,
@@ -60,10 +52,7 @@ import { WordpressMenuItem } from './wordpress-menu-item/wordpress-menu-item.com
     WordpressTags,
     WordpressFavorites,
     WordpressPages,
-    WordpressPage,
-    WordpressMenus,
-    WordpressMenu,
-    WordpressMenuItem
+    WordpressPage
   ]
 })
 export class WordpressModule {}
