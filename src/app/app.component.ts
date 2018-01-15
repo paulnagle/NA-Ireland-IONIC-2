@@ -14,6 +14,7 @@ import { PlaceholderComponent } from '../pages/placeholder/placeholder-component
 import { JustfortodayComponent } from '../pages/justfortoday/justfortoday-component/justfortoday.component';
 import { SpeakersComponent } from '../pages/speakers/speakers-component/speakers.component';
 import { WordpressPosts } from '../pages/wordpress/wordpress-posts/wordpress-posts.component';
+import { ContactComponent } from '../pages/contact/contact-component/contact.component';
 
 @Component({
 	templateUrl: './app.html'
@@ -55,6 +56,7 @@ export class MyApp {
 			{ title: 'JUSTFORTODAY', component: JustfortodayComponent, icon: 'calendar' },
 	    { title: 'DATETIME', component: DatetimeComponent, icon: 'clock'},
 			{ title: 'SPEAKERS', component: SpeakersComponent, icon: 'mic'},
+			{ title: 'CONTACT', component: ContactComponent, icon: 'contact'},			
 		];
 	}
 
