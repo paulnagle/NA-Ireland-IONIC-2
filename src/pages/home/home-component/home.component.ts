@@ -3,13 +3,10 @@ import { NavController, Events, MenuController } from 'ionic-angular';
 
 import { AboutComponent } from '../../about/about-component/about.component';
 import { WordpressHome } from '../../wordpress/wordpress-home/wordpress-home.component';
-import { WordpressPosts } from '../../wordpress/wordpress-posts/wordpress-posts.component';
-import { WordpressCategories } from '../../wordpress/wordpress-categories/wordpress-categories.component';
 import { WordpressTags } from '../../wordpress/wordpress-tags/wordpress-tags.component';
 import { WordpressFavorites } from '../../wordpress/wordpress-favorites/wordpress-favorites.component';
 import { WordpressPages } from '../../wordpress/wordpress-pages/wordpress-pages.component';
 import { WordpressPage } from '../../wordpress/wordpress-page/wordpress-page.component';
-import { WordpressMenus } from '../../wordpress/wordpress-menus/wordpress-menus.component';
 import { FeedCategoriesComponent } from '../../feeds/feed-categories/feed-categories.component';
 import { FeedCategoryComponent } from '../../feeds/feed-category/feed-category.component';
 
@@ -27,14 +24,10 @@ export class HomeComponent {
 	ngOnInit() {
 	  	this.pages = [
 	      { title: 'ABOUT', component: AboutComponent, icon: 'photos', note: '' },
-	      { title: 'POSTS', component: WordpressPosts, icon: 'logo-wordpress', note: 'Wordpress' },
-	      { title: 'CATEGORIES', component: WordpressCategories, icon: 'pricetags', note: 'Wordpress' },
 	      { title: 'TAGS', component: WordpressTags, icon: 'pricetags', note: 'Wordpress' },
-	      { title: 'CATEGORY', component: WordpressPosts, icon: 'pricetags', note: 'Wordpress', params: { category: { name: 'Category Name', id: 16 }}},
 	      { title: 'FAVORITES', component: WordpressFavorites, icon: 'heart', note: 'Wordpress (Storage)' },
 	      { title: 'PAGES', component: WordpressPages, icon: 'document', note: 'Wordpress' },
 				{ title: 'PAGE', component: WordpressPage, icon: 'document', note: 'Wordpress', params: { id: 2 }},
-	      { title: 'MENUS', component: WordpressMenus, icon: 'menu', note: 'Wordpress' },
 	      { title: 'FEEDS', component: FeedCategoriesComponent, icon: 'logo-rss', note: 'RSS (YQL)' },
 	      { title: 'FEED_CATEGORY', component: FeedCategoryComponent, icon: 'logo-rss', note: 'RSS (YQL)' }
 	    ];

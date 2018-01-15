@@ -11,7 +11,7 @@ import { DatetimeComponent } from '../pages/datetime/datetime-component/datetime
 import { SettingsComponent } from '../pages/settings/settings-component/settings.component';
 import { GoogleMapsComponent } from '../pages/google-maps/google-maps-component/google-maps.component';
 import { PlaceholderComponent } from '../pages/placeholder/placeholder-component/placeholder.component';
-import { WordpressMenus } from '../pages/wordpress/wordpress-menus/wordpress-menus.component';
+import { WordpressPosts } from '../pages/wordpress/wordpress-posts/wordpress-posts.component';
 
 @Component({
 	templateUrl: './app.html'
@@ -20,7 +20,6 @@ export class MyApp {
 	@ViewChild(Nav) nav: Nav;
 
 	rootPage = TabsComponent;
-	menuPage = WordpressMenus;
 	pages: Array<{title: string, component: any, icon: string}>;
 	wordpressMenusNavigation: boolean = false;
 
@@ -48,11 +47,11 @@ export class MyApp {
 		this.pages = [
 		  { title: 'HOME', component: TabsComponent, icon: 'home' },
 	    { title: 'SETTINGS', component: SettingsComponent, icon: 'settings'},
+			{ title: 'POSTS', component: WordpressPosts, icon: 'logo-wordpress'},
 			{ title: 'GOOGLE_MAPS', component: GoogleMapsComponent, icon: 'map'},
 			{ title: 'PLACEHOLDER', component: PlaceholderComponent, icon: 'logo-buffer' },
 	    { title: 'DATETIME', component: DatetimeComponent, icon: 'clock'},
 		];
-		this.wordpressMenusNavigation = config.wordpressMenusNavigation;
 	}
 
 	initializeApp() {
