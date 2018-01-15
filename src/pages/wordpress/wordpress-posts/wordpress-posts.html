@@ -38,12 +38,7 @@
 			<p>{{post.content.rendered | trimHTML | truncate: 100 }}</p>
 		</ion-card-content>
 		<ion-row no-padding>
-			<ion-col text-left>
-				<button ion-button icon-left clear (click)="favoritePost(post)">
-					<ion-icon name='heart'></ion-icon>
-					Favorite
-				</button>
-			</ion-col>
+
 			<ion-col text-right>
 				<button ion-button clear (click)="loadPost(post)">
 					Read
