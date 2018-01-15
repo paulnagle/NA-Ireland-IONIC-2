@@ -49,7 +49,6 @@
     "ionic-plugin-keyboard": "^2.2.1",
     "ionicons": "3.0.0",
     "moment": "2.15.1",
-    "phonegap-plugin-barcodescanner": "^6.0.5",
     "promise-polyfill": "6.0.2",
     "rxjs": "5.5.2",
     "sw-toolbox": "3.6.0",
