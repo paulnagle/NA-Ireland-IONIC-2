@@ -12,7 +12,6 @@ import { WordpressPage } from '../../wordpress/wordpress-page/wordpress-page.com
 import { WordpressMenus } from '../../wordpress/wordpress-menus/wordpress-menus.component';
 import { FeedCategoriesComponent } from '../../feeds/feed-categories/feed-categories.component';
 import { FeedCategoryComponent } from '../../feeds/feed-category/feed-category.component';
-import { ChartsComponent } from '../../charts/charts-component/charts.component';
 
 @Component({
 	selector: 'page-home',
@@ -38,8 +37,7 @@ export class HomeComponent {
 				{ title: 'PAGE', component: WordpressPage, icon: 'document', note: 'Wordpress', params: { id: 2 }},
 	      { title: 'MENUS', component: WordpressMenus, icon: 'menu', note: 'Wordpress' },
 	      { title: 'FEEDS', component: FeedCategoriesComponent, icon: 'logo-rss', note: 'RSS (YQL)' },
-	      { title: 'FEED_CATEGORY', component: FeedCategoryComponent, icon: 'logo-rss', note: 'RSS (YQL)' },
-	      { title: 'CHARTS', component: ChartsComponent, icon: 'pie', note: 'Chart.js' }
+	      { title: 'FEED_CATEGORY', component: FeedCategoryComponent, icon: 'logo-rss', note: 'RSS (YQL)' }
 	    ];
 
 	    this.events.subscribe('navigationEvent',(object) => {
