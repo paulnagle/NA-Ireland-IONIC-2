@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, Events, MenuController } from 'ionic-angular';
 
-
-
 @Component({
 	selector: 'page-home',
 	templateUrl: 'home.html'
@@ -16,7 +14,7 @@ export class HomeComponent {
 
 	ngOnInit() {
 	  	this.pages = [
-	     
+
 	    ];
 
 	    this.events.subscribe('navigationEvent',(object) => {

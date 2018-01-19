@@ -10,7 +10,6 @@ import { TabsModule } from '../pages/tabs/tabs.module';
 import { GoogleMapsModule } from '../pages/google-maps/google-maps.module';
 import { WordpressModule } from '../pages/wordpress/wordpress.module';
 import { SettingsModule } from '../pages/settings/settings.module';
-import { FeedsModule } from '../pages/feeds/feeds.module';
 import { AboutModule } from '../pages/about/about.module';
 import { ContactModule } from '../pages/contact/contact.module';
 import { DatetimeModule } from '../pages/datetime/datetime.module';
@@ -34,7 +33,6 @@ import { MyApp } from './app.component';
     GoogleMapsModule,
     WordpressModule,
     SettingsModule,
-    FeedsModule,
     AboutModule,
     ContactModule,
     DatetimeModule,
