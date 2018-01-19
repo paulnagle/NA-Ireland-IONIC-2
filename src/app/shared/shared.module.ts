@@ -57,7 +57,6 @@ export function createTranslateLoader(httpClient: HttpClient) {
     SplashScreen,
     InAppBrowser,
     SocialSharing,
-    BarcodeScanner,
     Facebook,
     EmailComposer,
     Config
