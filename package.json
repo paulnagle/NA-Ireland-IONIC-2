@@ -1,8 +1,8 @@
 {
-  "name": "ionic2app",
+  "name": "NAIreland",
   "version": "1.13.0",
-  "author": "George Tsopouridis",
-  "homepage": "https://codecanyon.net/user/gtsopour/portfolio",
+  "author": "Paul Nagle",
+  "homepage": "http://www.na-ireland.org",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -31,13 +31,12 @@
     "@ngx-translate/core": "8.0.0",
     "@ngx-translate/http-loader": "2.0.0",
     "chart.js": "2.7.1",
-    "cordova-android": "6.1.2",
-    "cordova-ios": "~4.3.1",
+    "cordova-android": "6.4.0",
+    "cordova-ios": "4.5.4",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-console": "^1.0.5",
     "cordova-plugin-device": "^1.1.4",
     "cordova-plugin-email": "^1.2.6",
-    "cordova-plugin-facebook4": "^1.7.1",
     "cordova-plugin-inappbrowser": "^1.6.1",
     "cordova-plugin-splashscreen": "^4.0.3",
     "cordova-plugin-statusbar": "^2.2.1",
@@ -69,11 +68,11 @@
     "cordova-plugin-email"
   ],
   "cordovaPlatforms": [],
-  "description": "Ionic Framework App",
+  "description": "NA Ireland",
   "cordova": {
     "platforms": [
-      "ios",
-      "android"
+      "android",
+      "ios"
     ],
     "plugins": {
       "ionic-plugin-keyboard": {},
