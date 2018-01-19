@@ -1,7 +1,7 @@
 ﻿{
     "MENU": "Menu",
     "HOME": "Home",
-    "ABOUT": "About this app...",
+    "ABOUT": "About this app",
     "POSTS": "Events & Conventions",
     "CATEGORIES": "Meetings List",
     "TAGS": "Tags",
@@ -26,7 +26,7 @@
     "YOUTUBE_VIDEOS": "Youtube Videos",
     "YOUTUBE_CHANNEL": "Youtube Channel",
     "CHARTS": "Charts",
-    "HOME_TITLE": "Welcome to Narcotics Anonymous Ireland",
+    "HOME_TITLE": "Narcotics Anonymous Ireland",
     "HOME_MESSAGE": "Contact details are on the Contact page",
     "CONTACT": "Contact",
     "LANGUAGE": "Language",
