@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, Events, MenuController } from 'ionic-angular';
 
-import { AboutComponent } from '../../about/about-component/about.component';
-
 @Component({
 	selector: 'page-home',
 	templateUrl: 'home.html'
@@ -16,7 +14,7 @@ export class HomeComponent {
 
 	ngOnInit() {
 	  	this.pages = [
-	      { title: 'ABOUT', component: AboutComponent, icon: 'photos', note: '' }
+
 	    ];
 
 	    this.events.subscribe('navigationEvent',(object) => {
