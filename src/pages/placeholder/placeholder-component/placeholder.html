@@ -10,20 +10,110 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Meetings</h2>
-  <ion-list *ngFor="let meeting of meetingList" >>
-    <ion-item>
-      {{ meeting.weekday_tinyint }}
-      {{ meeting.start_time }}
-      {{ meeting.longitude }}
-      {{ meeting.latitude }}
-      <p *ngIf = 'meeting.meeting_name != "NA Meeting"'>
-        {{ meeting.meeting_name }},
-      </p>
-      {{ meeting.location_text }},
-      {{ meeting.location_info }},
-      {{ meeting.location_street }},
-      {{ meeting.location_sub_province }}
-    </ion-item>
+  <ion-item-divider color="dark">Antrim</ion-item-divider>
+  <ion-item-divider color="light">Monday</ion-item-divider>
+  <ion-list *ngFor="let meeting of AntrimMondayList" >
+    <ion-card >
+      <ion-card-header>
+        Monday  {{ meeting.start_time | slice:0:5 }}
+      </ion-card-header>
+      <ion-card-content>
+        {{ meeting.location_text }}
+        {{ meeting.location_info }}
+        {{ meeting.location_street }}
+        {{ meeting.location_sub_province }}
+       </ion-card-content>
+    </ion-card>
   </ion-list>
+
+  <ion-item-divider color="light">Tuesday</ion-item-divider>
+  <ion-list *ngFor="let meeting of AntrimTuesdayList" >
+    <ion-card >
+      <ion-card-header>
+        Tuesday  {{ meeting.start_time | slice:0:5 }}
+      </ion-card-header>
+      <ion-card-content>
+        {{ meeting.location_text }}
+        {{ meeting.location_info }}
+        {{ meeting.location_street }}
+        {{ meeting.location_sub_province }}
+       </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-item-divider color="light">Wednesday</ion-item-divider>
+  <ion-list *ngFor="let meeting of AntrimWednesdayList" >
+    <ion-card >
+      <ion-card-header>
+        Wednesday  {{ meeting.start_time | slice:0:5 }}
+      </ion-card-header>
+      <ion-card-content>
+        {{ meeting.location_text }}
+        {{ meeting.location_info }}
+        {{ meeting.location_street }}
+        {{ meeting.location_sub_province }}
+       </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-item-divider color="light">Thursday</ion-item-divider>
+  <ion-list *ngFor="let meeting of AntrimThursdayList" >
+    <ion-card >
+      <ion-card-header>
+        Thursday  {{ meeting.start_time | slice:0:5 }}
+      </ion-card-header>
+      <ion-card-content>
+        {{ meeting.location_text }}
+        {{ meeting.location_info }}
+        {{ meeting.location_street }}
+        {{ meeting.location_sub_province }}
+       </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-item-divider color="light">Friday</ion-item-divider>
+  <ion-list *ngFor="let meeting of AntrimFridayList" >
+    <ion-card >
+      <ion-card-header>
+        Friday  {{ meeting.start_time | slice:0:5 }}
+      </ion-card-header>
+      <ion-card-content>
+        {{ meeting.location_text }}
+        {{ meeting.location_info }}
+        {{ meeting.location_street }}
+        {{ meeting.location_sub_province }}
+       </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-item-divider color="light">Saturday</ion-item-divider>
+  <ion-list *ngFor="let meeting of AntrimSaturdayList" >
+    <ion-card >
+      <ion-card-header>
+        Saturday  {{ meeting.start_time | slice:0:5 }}
+      </ion-card-header>
+      <ion-card-content>
+        {{ meeting.location_text }}
+        {{ meeting.location_info }}
+        {{ meeting.location_street }}
+        {{ meeting.location_sub_province }}
+       </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-item-divider color="light">Sunday</ion-item-divider>
+  <ion-list *ngFor="let meeting of AntrimSundayList" >
+    <ion-card >
+      <ion-card-header>
+        Sunday  {{ meeting.start_time | slice:0:5 }}
+      </ion-card-header>
+      <ion-card-content>
+        {{ meeting.location_text }}
+        {{ meeting.location_info }}
+        {{ meeting.location_street }}
+        {{ meeting.location_sub_province }}
+       </ion-card-content>
+    </ion-card>
+  </ion-list>
+
 </ion-content>
