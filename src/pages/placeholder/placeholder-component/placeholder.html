@@ -10,5 +10,20 @@
 </ion-header>
 
 <ion-content padding>
-	Meetings list will go here
+  <h2>Meetings</h2>
+  <ion-list *ngFor="let meeting of meetingList" >>
+    <ion-item>
+      {{ meeting.weekday_tinyint }}
+      {{ meeting.start_time }}
+      {{ meeting.longitude }}
+      {{ meeting.latitude }}
+      <p *ngIf = 'meeting.meeting_name != "NA Meeting"'>
+        {{ meeting.meeting_name }},
+      </p>
+      {{ meeting.location_text }},
+      {{ meeting.location_info }},
+      {{ meeting.location_street }},
+      {{ meeting.location_sub_province }}
+    </ion-item>
+  </ion-list>
 </ion-content>
