@@ -17,7 +17,9 @@ import { DatetimeModule } from '../pages/datetime/datetime.module';
 import { PlaceholderModule }  from '../pages/placeholder/placeholder.module';
 import { JustfortodayModule } from '../pages/justfortoday/justfortoday.module';
 import { SpeakersModule }     from '../pages/speakers/speakers.module';
+import { MeetingListProvider } from '../providers/meeting-list/meeting-list';
 
+import { HttpClientModule  } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 
@@ -44,6 +46,6 @@ import { MyApp } from './app.component';
   entryComponents: [
     MyApp
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [MeetingListProvider, {provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}
