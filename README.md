@@ -2,9 +2,9 @@
 
 Example commands to build a git clone of this app (on a mac)
 
-For more details see https://ionicframework.com/
+Download the NA-Ireland-Ionic-2-master.zip file, extract it and cd into the directory.
 
-Install Ionic Framework App
+Install Ionic Framework (For more details see https://ionicframework.com/) 
 ```
 $ npm install -g ionic@latest
 ```
