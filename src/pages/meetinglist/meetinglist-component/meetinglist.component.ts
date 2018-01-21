@@ -83,7 +83,7 @@ export class MeetinglistComponent {
   toggleAntrim(group) { if (this.isAntrimShown(group)) { this.shownAntrim = null; } else { this.shownAntrim = group;} };
   isAntrimShown(group) { return this.shownAntrim === group; };
 
-  toggleArmaghArmagh(group) { if (this.isArmaghShown(group)) { this.shownArmagh = null; } else { this.shownArmagh = group;} };
+  toggleArmagh(group) { if (this.isArmaghShown(group)) { this.shownArmagh = null; } else { this.shownArmagh = group;} };
   isArmaghShown(group) { return this.shownArmagh === group; };
 
   toggleCarlow(group) { if (this.isCarlowShown(group)) { this.shownCarlow = null; } else { this.shownCarlow = group;} };
