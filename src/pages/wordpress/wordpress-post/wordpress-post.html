@@ -4,11 +4,6 @@
 			<ion-icon name="menu"></ion-icon>
 		</button>
 		<ion-title *ngIf="post">{{post.title.rendered}}</ion-title>
-		<ion-buttons end>
-	      <button (tap)="sharePost()" ion-button icon-only>
-	        <ion-icon name="share"></ion-icon>
-	      </button>
-	    </ion-buttons>
 	</ion-navbar>
 </ion-header>
 
@@ -32,17 +27,5 @@
         <p padding [innerHtml]="post.content.rendered"></p>
     </ion-card>
 
-	<button ion-button full (click)=previewPost()>Preview</button>
-
-	<ion-list *ngIf="comments">
-	  <ion-item-divider light>Comments</ion-item-divider>
-	  <ion-item text-wrap *ngFor="let comment of comments">
-	    <ion-avatar item-left>
-	      <img [src]="comment.author_avatar_urls[96]">
-	    </ion-avatar>
-	    <h2>{{comment.author_name}}</h2>
-	    <p [innerHTML]="comment.content.rendered"></p>
-	  </ion-item>
-	</ion-list>
   </ion-list>
 </ion-content>
