@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <ion-title>Meetings List</ion-title>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <h1> Cork </h1>
+  <ion-list *ngFor="let meeting of CorkList" >
+    <ion-card>
+      <ion-card-header>
+          <div ngSwitch="{{ meeting.weekday_tinyint }}">
+            <div *ngSwitchCase="'1'" [ngClass]="'one'">Monday   {{ meeting.start_time | slice:0:5 }} </div>
+            <div *ngSwitchCase="'2'" [ngClass]="'one'">Tuesday   {{ meeting.start_time | slice:0:5 }} </div>
+            <div *ngSwitchCase="'3'" [ngClass]="'one'">Wednesday   {{ meeting.start_time | slice:0:5 }} </div>
+            <div *ngSwitchCase="'4'" [ngClass]="'one'">Thursday   {{ meeting.start_time | slice:0:5 }} </div>
+            <div *ngSwitchCase="'5'" [ngClass]="'one'">Friday   {{ meeting.start_time | slice:0:5 }} </div>
+            <div *ngSwitchCase="'6'" [ngClass]="'one'">Saturday   {{ meeting.start_time | slice:0:5 }} </div>
+            <div *ngSwitchCase="'7'" [ngClass]="'one'">Sunday   {{ meeting.start_time | slice:0:5 }} </div>
+        	<div *ngSwitchDefault>Nothing Found.</div>
+        </div>
+      </ion-card-header>
+      <ion-card-content>
+        <b>{{ meeting.meeting_name }}</b>
+        {{ meeting.location_text }}
+        {{ meeting.location_info }}
+        {{ meeting.location_street }}
+        {{ meeting.location_sub_province }}
+       </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <h1> Antrim </h1>
+  <ion-list *ngFor="let meeting of AntrimList" >
+    <ion-card>
+        <ion-card-header>{{ meeting.weekday_tinyint }}  {{ meeting.start_time | slice:0:5 }} </ion-card-header>
+      <ion-card-content>
+        {{ meeting.location_text }}
+        {{ meeting.location_info }}
+        {{ meeting.location_street }}
+        {{ meeting.location_sub_province }}
+       </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+
+</ion-content>
