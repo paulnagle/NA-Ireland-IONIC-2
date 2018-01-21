@@ -37,7 +37,7 @@ $colors: (
   Orange:     #F09609,
   Blue:       #1BA1E2,
   Red:        #E51400,
-  Green:      #339933 
+  Green:      #339933
 
 
 );
@@ -73,7 +73,9 @@ $colors: (
 
 @import "ionic.theme.default";
 
-
+.card-md {
+    background: #f4f4f4 !important;
+  }
 // Ionicons
 // --------------------------------------------------
 // The premium icon font for Ionic. For more info, please see:
