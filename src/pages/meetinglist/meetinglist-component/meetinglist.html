@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <ion-title>Meetings List</ion-title>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item-divider color="dark"  text-wrap (click)="toggleAntrim(i)" [ngClass]="{active: isAntrimShown(i)}"><h1><b>Antrim</b></h1>
+    <ion-icon color="success" item-right [name]="isAntrimShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+  </ion-item-divider>
+  <div *ngIf="isAntrimShown(i)">
+    <ion-list *ngFor="let meeting of AntrimList"  >
+      <ion-card>
+        <ion-card-header>
+            <div ngSwitch="{{ meeting.weekday_tinyint }}">
+              <div *ngSwitchCase="'1'" [ngClass]="'one'">Monday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'2'" [ngClass]="'one'">Tuesday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'3'" [ngClass]="'one'">Wednesday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'4'" [ngClass]="'one'">Thursday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'5'" [ngClass]="'one'">Friday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'6'" [ngClass]="'one'">Saturday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'7'" [ngClass]="'one'">Sunday   {{ meeting.start_time | slice:0:5 }} </div>
+          	<div *ngSwitchDefault>Nothing Found.</div>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <b>{{ meeting.meeting_name }}</b>
+          {{ meeting.location_text }}
+          {{ meeting.location_info }}
+          {{ meeting.location_street }}
+         </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
+
+  <ion-item-divider color="dark"  text-wrap (click)="toggleCork(i)" [ngClass]="{active: isCorkShown(i)}"><h1><b>Cork</b></h1>
+    <ion-icon color="success" item-right [name]="isCorkShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+  </ion-item-divider>
+  <div *ngIf="isCorkShown(i)">
+    <ion-list *ngFor="let meeting of CorkList"  >
+      <ion-card>
+        <ion-card-header>
+            <div ngSwitch="{{ meeting.weekday_tinyint }}">
+              <div *ngSwitchCase="'1'" [ngClass]="'one'">Monday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'2'" [ngClass]="'one'">Tuesday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'3'" [ngClass]="'one'">Wednesday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'4'" [ngClass]="'one'">Thursday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'5'" [ngClass]="'one'">Friday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'6'" [ngClass]="'one'">Saturday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'7'" [ngClass]="'one'">Sunday   {{ meeting.start_time | slice:0:5 }} </div>
+          	<div *ngSwitchDefault>Nothing Found.</div>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <b>{{ meeting.meeting_name }}</b>
+          {{ meeting.location_text }}
+          {{ meeting.location_info }}
+          {{ meeting.location_street }}
+         </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
+
+  <ion-item-divider color="dark"  text-wrap (click)="toggleDublin(i)" [ngClass]="{active: isDublinShown(i)}"><h1><b>Dublin</b></h1>
+    <ion-icon color="success" item-right [name]="isDublinShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+  </ion-item-divider>
+  <div *ngIf="isDublinShown(i)">
+    <ion-list *ngFor="let meeting of DublinList"  >
+      <ion-card>
+        <ion-card-header>
+            <div ngSwitch="{{ meeting.weekday_tinyint }}">
+              <div *ngSwitchCase="'1'" [ngClass]="'one'">Monday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'2'" [ngClass]="'one'">Tuesday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'3'" [ngClass]="'one'">Wednesday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'4'" [ngClass]="'one'">Thursday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'5'" [ngClass]="'one'">Friday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'6'" [ngClass]="'one'">Saturday   {{ meeting.start_time | slice:0:5 }} </div>
+              <div *ngSwitchCase="'7'" [ngClass]="'one'">Sunday   {{ meeting.start_time | slice:0:5 }} </div>
+          	<div *ngSwitchDefault>Nothing Found.</div>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <b>{{ meeting.meeting_name }}</b>
+          {{ meeting.location_text }}
+          {{ meeting.location_info }}
+          {{ meeting.location_street }}
+         </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
+
+
+
+
+
+</ion-content>

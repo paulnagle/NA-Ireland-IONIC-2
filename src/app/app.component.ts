@@ -10,7 +10,7 @@ import { TabsComponent } from '../pages/tabs/tabs-component/tabs.component';
 import { DatetimeComponent } from '../pages/datetime/datetime-component/datetime.component';
 import { SettingsComponent } from '../pages/settings/settings-component/settings.component';
 import { GoogleMapsComponent } from '../pages/google-maps/google-maps-component/google-maps.component';
-import { PlaceholderComponent } from '../pages/placeholder/placeholder-component/placeholder.component';
+import { MeetinglistComponent } from '../pages/meetinglist/meetinglist-component/meetinglist.component';
 import { JustfortodayComponent } from '../pages/justfortoday/justfortoday-component/justfortoday.component';
 import { SpeakersComponent } from '../pages/speakers/speakers-component/speakers.component';
 import { WordpressPosts } from '../pages/wordpress/wordpress-posts/wordpress-posts.component';
@@ -53,7 +53,7 @@ export class MyApp {
 	    { title: 'SETTINGS', component: SettingsComponent, icon: 'settings'},
 			{ title: 'POSTS', component: WordpressPosts, icon: 'logo-wordpress'},
 			{ title: 'GOOGLE_MAPS', component: GoogleMapsComponent, icon: 'map'},
-			{ title: 'PLACEHOLDER', component: PlaceholderComponent, icon: 'logo-buffer' },
+			{ title: 'MEETINGLIST', component: MeetinglistComponent, icon: 'logo-buffer' },
 			{ title: 'JUSTFORTODAY', component: JustfortodayComponent, icon: 'calendar' },
 	    { title: 'DATETIME', component: DatetimeComponent, icon: 'clock'},
 			{ title: 'SPEAKERS', component: SpeakersComponent, icon: 'mic'},

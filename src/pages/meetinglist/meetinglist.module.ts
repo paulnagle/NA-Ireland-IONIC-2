@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../app/shared/shared.module';
-import { PlaceholderComponent } from './placeholder-component/placeholder.component';
+import { MeetinglistComponent } from './meetinglist-component/meetinglist.component';
 
 @NgModule({
   declarations: [
-    PlaceholderComponent
+    MeetinglistComponent
   ],
   imports: [
   	CommonModule,
   	SharedModule
   ],
   exports: [
-    PlaceholderComponent
+    MeetinglistComponent
   ],
   entryComponents:[
-  	PlaceholderComponent
+  	MeetinglistComponent
   ]
 })
-export class PlaceholderModule {}
+export class MeetinglistModule {}
