@@ -18,22 +18,51 @@
     <ion-list *ngFor="let meeting of AntrimList"  >
       <ion-card>
         <ion-card-header>
+
             <div ngSwitch="{{ meeting.weekday_tinyint }}">
-              <div *ngSwitchCase="'1'" [ngClass]="'one'">Monday   {{ meeting.start_time | slice:0:5 }} </div>
-              <div *ngSwitchCase="'2'" [ngClass]="'one'">Tuesday   {{ meeting.start_time | slice:0:5 }} </div>
-              <div *ngSwitchCase="'3'" [ngClass]="'one'">Wednesday   {{ meeting.start_time | slice:0:5 }} </div>
-              <div *ngSwitchCase="'4'" [ngClass]="'one'">Thursday   {{ meeting.start_time | slice:0:5 }} </div>
-              <div *ngSwitchCase="'5'" [ngClass]="'one'">Friday   {{ meeting.start_time | slice:0:5 }} </div>
-              <div *ngSwitchCase="'6'" [ngClass]="'one'">Saturday   {{ meeting.start_time | slice:0:5 }} </div>
-              <div *ngSwitchCase="'7'" [ngClass]="'one'">Sunday   {{ meeting.start_time | slice:0:5 }} </div>
-          	<div *ngSwitchDefault>Nothing Found.</div>
+              <div *ngSwitchCase="'1'" [ngClass]="'one'">
+                <ion-badge color="Teal"><b>Monday   {{ meeting.start_time | slice:0:5 }} </b></ion-badge>
+              </div>
+              <div *ngSwitchCase="'2'" [ngClass]="'one'">
+                <ion-badge color="Lime"><b>Tuesday   {{ meeting.start_time | slice:0:5 }} </b></ion-badge>
+              </div>
+              <div *ngSwitchCase="'3'" [ngClass]="'one'">
+                <ion-badge color="Purple"><b>Wednesday   {{ meeting.start_time | slice:0:5 }} </b></ion-badge>
+              </div>
+              <div *ngSwitchCase="'4'" [ngClass]="'one'">
+                <ion-badge color="Brown"><b>Thursday   {{ meeting.start_time | slice:0:5 }} </b></ion-badge>
+              </div>
+              <div *ngSwitchCase="'5'" [ngClass]="'one'">
+                <ion-badge color="Pink"><b>Friday   {{ meeting.start_time | slice:0:5 }} </b></ion-badge>
+              </div>
+              <div *ngSwitchCase="'6'" [ngClass]="'one'">
+                <ion-badge color="Orange"><b>Saturday   {{ meeting.start_time | slice:0:5 }} </b></ion-badge>
+              </div>
+              <div *ngSwitchCase="'7'" [ngClass]="'one'">
+                <ion-badge color="Green"><b>Sunday   {{ meeting.start_time | slice:0:5 }} </b></ion-badge>
+              </div>
+          	  <div *ngSwitchDefault>Nothing Found.</div>
           </div>
         </ion-card-header>
         <ion-card-content>
-          <b>{{ meeting.meeting_name }}</b>
-          {{ meeting.location_text }}
-          {{ meeting.location_info }}
-          {{ meeting.location_street }}
+          <ion-grid>
+            <ion-row>
+
+              <ion-col col-8 >
+                <b>{{ meeting.meeting_name }}</b>
+                {{ meeting.location_text }}
+                {{ meeting.location_info }}
+                {{ meeting.location_street }}
+              </ion-col>
+
+              <ion-col>
+                <button ion-button icon-start>
+                  <ion-icon name="map"></ion-icon>Map
+                </button>
+              </ion-col>
+
+            </ion-row>
+          </ion-grid>
          </ion-card-content>
       </ion-card>
     </ion-list>
