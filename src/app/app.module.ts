@@ -21,6 +21,7 @@ import { MeetingListProvider } from '../providers/meeting-list/meeting-list';
 import { HttpClientModule  } from '@angular/common/http';
 
 import { MyApp } from './app.component';
+import { JftProvider } from '../providers/jft/jft';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { MyApp } from './app.component';
   entryComponents: [
     MyApp
   ],
-  providers: [MeetingListProvider, {provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [MeetingListProvider, {provide: ErrorHandler, useClass: IonicErrorHandler},
+    JftProvider]
 })
 export class AppModule {}
