@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 export class JftProvider {
 
   constructor(public http: HttpClient) {
+    console.log('Hello JftProvider Provider');
   }
 
   getJFTUrl : string = "http://jftna.org/jft/";
