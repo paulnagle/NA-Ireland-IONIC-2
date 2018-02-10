@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../app/shared/shared.module';
 import { GoogleMapsComponent } from './google-maps-component/google-maps.component';
 import { AgmCoreModule } from '@agm/core';
+import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
+
 
 @NgModule({
   declarations: [
@@ -13,7 +15,8 @@ import { AgmCoreModule } from '@agm/core';
   	SharedModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA9aj3-17cojks6gicZZ_PY2t5ERVu25ac'
-    })
+    }),
+    AgmJsMarkerClustererModule
   ],
   exports: [
     GoogleMapsComponent
