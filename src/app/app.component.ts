@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 import { Storage } from '@ionic/storage';
 import { TranslateService } from '@ngx-translate/core';
 import { Config } from './app.config';
@@ -31,6 +32,7 @@ export class MyApp {
 		private translate: TranslateService,
 		private storage: Storage,
 		private statusBar: StatusBar,
+		private splashScreen: SplashScreen,
 		private config: Config,
 		private menuController: MenuController
 		) {
@@ -65,6 +67,7 @@ export class MyApp {
 			// Enable RTL Support
 			// this.platform.setDir('rtl', true);
 			this.statusBar.styleDefault();
+			this.splashScreen.hide();
 		});
 	}
 

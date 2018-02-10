@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MeetingListProvider } from '../../../providers/meeting-list/meeting-list';
 
 import { NavController } from 'ionic-angular';
+import { LoadingController } from 'ionic-angular';
 
 @Component({
   selector: 'page-meetinglist',
@@ -76,9 +77,21 @@ export class MeetinglistComponent {
   shownWexford = null;
   shownWicklow = null;
 
-  constructor(private MeetingListProvider : MeetingListProvider) {
+  loader = null;
+
+  constructor(private MeetingListProvider : MeetingListProvider, public loadingCtrl: LoadingController) {
+
+    this.loader = this.loadingCtrl.create({
+          content: "Loading Meeting List..."
+        });
+    this.loader.present();
+
     this.getAllMeetings();
+
   }
+
+
+
 
   toggleAntrim(group) { if (this.isAntrimShown(group)) { this.shownAntrim = null; } else { this.shownAntrim = group;} };
   isAntrimShown(group) { return this.shownAntrim === group; };
@@ -211,6 +224,8 @@ export class MeetinglistComponent {
       this.WestmeathList = this.meetingList.filter(meeting => meeting.location_sub_province == "Westmeath");
       this.WexfordList   = this.meetingList.filter(meeting => meeting.location_sub_province == "Wexford");
       this.WicklowList   = this.meetingList.filter(meeting => meeting.location_sub_province == "Wicklow");
+
+      this.loader.dismiss();
     });
   }
 }
