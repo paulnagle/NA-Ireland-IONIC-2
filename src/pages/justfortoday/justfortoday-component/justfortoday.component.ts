@@ -19,7 +19,6 @@ export class JustfortodayComponent {
   getJFT(){
     this.JftProvider.getJFT().subscribe((data)=>{
       this.jft = data;
-      console.log(data);
 
     });
   }

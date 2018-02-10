@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { EmailComposer } from '@ionic-native/email-composer';
@@ -52,6 +53,7 @@ export function createTranslateLoader(httpClient: HttpClient) {
   ],
   providers: [
     StatusBar,
+    SplashScreen,
     InAppBrowser,
     SocialSharing,
     EmailComposer,
