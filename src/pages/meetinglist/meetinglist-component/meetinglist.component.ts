@@ -82,7 +82,7 @@ export class MeetinglistComponent {
   constructor(private MeetingListProvider : MeetingListProvider, public loadingCtrl: LoadingController) {
 
     this.loader = this.loadingCtrl.create({
-          content: "Loading Meetings..."
+          content: "Loading Meeting List..."
         });
     this.loader.present();
 

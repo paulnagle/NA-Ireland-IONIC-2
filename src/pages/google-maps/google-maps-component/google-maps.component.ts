@@ -13,7 +13,7 @@ export class GoogleMapsComponent {
   constructor(private MeetingListProvider : MeetingListProvider, public loadingCtrl: LoadingController) {
 
     this.loader = this.loadingCtrl.create({
-          content: "Loading Meetings..."
+          content: "Loading Meeting Map..."
         });
     this.loader.present();
 
