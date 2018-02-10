@@ -1,9 +1,17 @@
 import { Component } from '@angular/core';
+import { MeetingListProvider } from '../../../providers/meeting-list/meeting-list';
 
 @Component({
   templateUrl: 'google-maps.html'
 })
 export class GoogleMapsComponent {
+
+  meetingList : any;
+
+  constructor(private MeetingListProvider : MeetingListProvider) {
+    this.getAllMeetings();
+  }
+
   // Google Map zoom level
   zoom: number = 8;
 
@@ -11,25 +19,21 @@ export class GoogleMapsComponent {
   latitude: number = 53.341318;
   longitude: number = -6.270205;
 
-  markers = [
-	  {
-		  latitude: 53.341318,
-		  longitude: -6.270205,
-		  label: "ISO Office",
-		  description: "14b Kevin Street, Dublin"
-	  },
-	  {
-		  latitude: 51.373858,
-		  longitude: 7.215982,
-		  label: "B",
-		  description: "Description B"
-	  },
-	  {
-		  latitude: 51.723858,
-		  longitude: 7.895982,
-		  label: "C",
-		  description: "Description C"
-	  }
-  ]
+  dayOfWeekAsString(dayIndex) {
+  	return ["not a day?", "Sun", "Mon","Tue","Wed","Thu","Fri","Sat"][dayIndex];
+  }
+
+  getAllMeetings(){
+    this.MeetingListProvider.getMeetings().subscribe((data)=>{
+      this.meetingList  = data;
+      this.meetingList  = this.meetingList.filter(meeting => meeting.latitude = parseFloat(meeting.latitude));
+      this.meetingList  = this.meetingList.filter(meeting => meeting.longitude = parseFloat(meeting.longitude));
+      this.meetingList  = this.meetingList.filter(meeting => meeting.start_time = (meeting.start_time).substring(0,5));
+      this.meetingList  = this.meetingList.filter(meeting => meeting.weekday_tinyint = this.dayOfWeekAsString(meeting.weekday_tinyint));
+
+    });
+  }
+
+
 
 }

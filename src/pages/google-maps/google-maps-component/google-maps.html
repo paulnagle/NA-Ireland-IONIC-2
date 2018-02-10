@@ -10,22 +10,30 @@
 </ion-header>
 
 <ion-content>
-    <agm-map
-      [latitude]="latitude"
-      [longitude]="longitude"
-      [zoom]="zoom"
-      [disableDefaultUI]="false"
-      [zoomControl]="true">
-
+  <agm-map
+    [latitude]="latitude"
+    [longitude]="longitude"
+    [zoom]="zoom"
+    [disableDefaultUI]="false"
+    [zoomControl]="true">
+    <agm-marker-cluster imagePath="https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m">
       <agm-marker
-          *ngFor="let marker of markers; let i = index"
-          [latitude]="marker.latitude"
-          [longitude]="marker.longitude"
-          [label]="marker.label">
+        *ngFor="let marker of meetingList; let i = index"
+        [latitude]="marker.latitude"
+        [longitude]="marker.longitude"
+        [iconUrl]="'assets/img/marker-na.png'">
         <agm-info-window>
-          <strong>{{marker.description}}</strong>
+          <h1>{{marker.meeting_name}}</h1>
+          <p><b>{{marker.weekday_tinyint}}  {{marker.start_time}}</b></p>
+          {{marker.location_text}}<br>
+          {{marker.location_street}}<br>
+          {{marker.location_sub_province}}<br>
+          {{marker.location_info}}<br>
+          <a button ion-button icon-start href="https://maps.google.com/maps?q={{ marker.latitude}},{{ marker.longitude}}" target="_system">
+            <ion-icon name="map"></ion-icon>Map
+          </a>
         </agm-info-window>
       </agm-marker>
-
-    </agm-map>
+    </agm-marker-cluster>
+  </agm-map>
 </ion-content>
