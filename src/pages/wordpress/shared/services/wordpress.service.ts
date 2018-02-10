@@ -13,7 +13,7 @@ export class WordpressService {
 		return this.http.post(url, data)
 	  	.map(result => {
 			return result.json();
-		});    
+		});
 	}
 
 	public getPosts(query) {
@@ -22,7 +22,7 @@ export class WordpressService {
 		return this.http.get(url)
 	  	.map(result => {
 			return result.json();
-		});    
+		});
 	}
 
 	public getPost(id) {
@@ -39,47 +39,6 @@ export class WordpressService {
 		});
 	}
 
-	public getCategories() {
-		return this.http.get(this.config.wordpressApiUrl + '/wp/v2/categories?per_page=100')
-		.map(result => {
-			return result.json();
-		});
-	}
-
-	public getTags() {
-		return this.http.get(this.config.wordpressApiUrl + '/wp/v2/tags?per_page=100')
-		.map(result => {
-			return result.json();
-		});
-	}
-
-	public getPages() {
-		return this.http.get(this.config.wordpressApiUrl + '/wp/v2/pages?per_page=100')
-		.map(result => {
-			return result.json();
-		});
-	}
-
-	public getPage(id) {
-		return this.http.get(this.config.wordpressApiUrl + `/wp/v2/pages/${id}`)
-	  	.map(result => {
-			return result.json();
-		});
-	}
-
-	public getMenus() {
-		return this.http.get(this.config.wordpressApiUrl + '/wp-api-menus/v2/menus')
-		.map(result => {
-			return result.json();
-		});
-	}
-
-	public getMenu(id) {
-		return this.http.get(this.config.wordpressApiUrl + `/wp-api-menus/v2/menus/${id}`)
-	  	.map(result => {
-			return result.json();
-		});
-	}
 
 	private transformRequest(obj) {
 		let p, str;
