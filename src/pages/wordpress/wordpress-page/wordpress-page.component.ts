@@ -6,14 +6,12 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import { WordpressService } from '../shared/services/wordpress.service';
 
 @Component({
-	templateUrl: './wordpress-post.html',
+	templateUrl: './wordpress-page.html',
 	providers: [ WordpressService ]
 })
-export class WordpressPost {
-	post: any;
-    authorData: any;
-    comments = [];
-
+export class WordpressPage {
+	page: any;
+	
 	constructor(
 			private navParams: NavParams,
 			private wordpressService: WordpressService,
@@ -21,47 +19,39 @@ export class WordpressPost {
 			private iab: InAppBrowser,
 			private socialSharing: SocialSharing
 		) {
-		if (navParams.get('post')) {
-			this.post = navParams.get('post');
-			this.authorData = this.post["_embedded"].author[0];
-			if(this.post["_embedded"].replies) {
-			 	this.comments = this.post["_embedded"].replies[0];
-			}
+		if (navParams.get('page')) {
+			this.page = navParams.get('page');
 		}
 		if (navParams.get('id')) {
-			this.getPost(navParams.get('id'));
+			this.getPage(navParams.get('id'));
 		}
 	}
 
-	getPost(id) {
+	getPage(id) {
 		let loader = this.loadingController.create({
 			content: "Please wait"
 		});
 
 		loader.present();
-		this.wordpressService.getPost(id)
+		this.wordpressService.getPage(id)
 		.subscribe(result => {
-			this.post = result;
-			this.authorData = this.post["_embedded"].author[0];
-			if(this.post["_embedded"].replies) {
-			 	this.comments = this.post["_embedded"].replies[0];
-			}
+			this.page = result;
 		},
 		error => console.log(error),
     () => loader.dismiss());
 	}
 
-	previewPost() {
-		const browser = this.iab.create(this.post.link, '_blank');
+	previewPage() {
+		const browser = this.iab.create(this.page.link, '_blank');
 		browser.show();
 	}
 
-	sharePost() {
-		let subject = this.post.title.rendered;
-		let message = this.post.content.rendered;
+	sharePage() {
+		let subject = this.page.title.rendered;
+		let message = this.page.content.rendered;
 		message = message.replace(/(<([^>]+)>)/ig,"");
-		let url = this.post.link;
-		this.socialSharing.share(message, subject, '', url);	
+		let url = this.page.link;
+		this.socialSharing.share(message, subject, '', url);
 	}
 
 }
