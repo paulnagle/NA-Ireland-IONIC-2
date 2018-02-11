@@ -4,6 +4,8 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+
 import { SharedModule } from './shared/shared.module'
 import { HomeModule } from '../pages/home/home.module';
 import { TabsModule } from '../pages/tabs/tabs.module';
@@ -46,7 +48,11 @@ import { JftProvider } from '../providers/jft/jft';
   entryComponents: [
     MyApp
   ],
-  providers: [MeetingListProvider, {provide: ErrorHandler, useClass: IonicErrorHandler},
-    JftProvider]
+  providers: [
+    MeetingListProvider,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    JftProvider,
+    InAppBrowser
+    ]
 })
 export class AppModule {}

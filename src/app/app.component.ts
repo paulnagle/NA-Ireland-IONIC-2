@@ -64,11 +64,17 @@ export class MyApp {
 
 	initializeApp() {
 		this.platform.ready().then(() => {
-			// Enable RTL Support
-			// this.platform.setDir('rtl', true);
 			this.statusBar.styleDefault();
-			this.splashScreen.hide();
+			this.hideSplashScreen();
 		});
+	}
+
+	hideSplashScreen() {
+		if (this.splashScreen) {
+			setTimeout(() => {
+				this.splashScreen.hide();
+			}, 100);
+		}
 	}
 
 	openPage(page) {
