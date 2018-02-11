@@ -29,9 +29,7 @@
           {{marker.location_street}}<br>
           {{marker.location_sub_province}}<br>
           {{marker.location_info}}<br>
-          <a button ion-button icon-start href="https://maps.google.com/maps?q={{ marker.latitude}},{{ marker.longitude}}" target="_system">
-            <ion-icon name="map"></ion-icon>Map
-          </a>
+          <button ion-button small (click)="openMapsLink(marker.latitude , marker.longitude)"><ion-icon name="map"></ion-icon>Map</button>
         </agm-info-window>
       </agm-marker>
     </agm-marker-cluster>

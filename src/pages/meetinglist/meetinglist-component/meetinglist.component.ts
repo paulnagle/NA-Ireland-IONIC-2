@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser';
 import { MeetingListProvider } from '../../../providers/meeting-list/meeting-list';
 
 import { NavController } from 'ionic-angular';
@@ -9,6 +10,24 @@ import { LoadingController } from 'ionic-angular';
   templateUrl: 'meetinglist.html'
 })
 export class MeetinglistComponent {
+
+  options : InAppBrowserOptions = {
+      location : 'yes',//Or 'no'
+      hidden : 'no', //Or  'yes'
+      clearcache : 'yes',
+      clearsessioncache : 'yes',
+      zoom : 'no',//Android only ,shows browser zoom controls
+      hardwareback : 'yes',
+      mediaPlaybackRequiresUserAction : 'no',
+      shouldPauseOnSuspend : 'no', //Android only
+      closebuttoncaption : 'Close', //iOS only
+      disallowoverscroll : 'no', //iOS only
+      toolbar : 'yes', //iOS only
+      enableViewportScale : 'no', //iOS only
+      allowInlineMediaPlayback : 'no',//iOS only
+      presentationstyle : 'pagesheet',//iOS only
+      fullscreen : 'yes',//Windows only
+  };
 
   meetingList : any;
   AntrimList : any;
@@ -79,7 +98,9 @@ export class MeetinglistComponent {
 
   loader = null;
 
-  constructor(private MeetingListProvider : MeetingListProvider, public loadingCtrl: LoadingController) {
+  constructor(private MeetingListProvider : MeetingListProvider,
+              public loadingCtrl: LoadingController,
+              private theInAppBrowser: InAppBrowser) {
 
     this.loader = this.loadingCtrl.create({
           content: "Loading Meeting List..."
@@ -90,8 +111,11 @@ export class MeetinglistComponent {
 
   }
 
-
-
+  public openMapsLink(destLatitude, destLongitude){
+    let target = "_blank";
+    let url = "https://www.google.com/maps/search/?api=1&query=" + destLatitude + ',' + destLongitude;
+    this.theInAppBrowser.create(url,target,this.options);
+  }
 
   toggleAntrim(group) { if (this.isAntrimShown(group)) { this.shownAntrim = null; } else { this.shownAntrim = group;} };
   isAntrimShown(group) { return this.shownAntrim === group; };

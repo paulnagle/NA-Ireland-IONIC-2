@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoadingController } from 'ionic-angular';
+import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser';
 import { MeetingListProvider } from '../../../providers/meeting-list/meeting-list';
 
 @Component({
@@ -7,10 +8,30 @@ import { MeetingListProvider } from '../../../providers/meeting-list/meeting-lis
 })
 export class GoogleMapsComponent {
 
+  options : InAppBrowserOptions = {
+      location : 'yes',//Or 'no'
+      hidden : 'no', //Or  'yes'
+      clearcache : 'yes',
+      clearsessioncache : 'yes',
+      zoom : 'yes',//Android only ,shows browser zoom controls
+      hardwareback : 'yes',
+      mediaPlaybackRequiresUserAction : 'no',
+      shouldPauseOnSuspend : 'no', //Android only
+      closebuttoncaption : 'Close', //iOS only
+      disallowoverscroll : 'no', //iOS only
+      toolbar : 'yes', //iOS only
+      enableViewportScale : 'no', //iOS only
+      allowInlineMediaPlayback : 'no',//iOS only
+      presentationstyle : 'pagesheet',//iOS only
+      fullscreen : 'yes',//Windows only
+  };
+
   meetingList : any;
 
   loader = null;
-  constructor(private MeetingListProvider : MeetingListProvider, public loadingCtrl: LoadingController) {
+  constructor(private MeetingListProvider : MeetingListProvider,
+              public loadingCtrl: LoadingController,
+              private theInAppBrowser: InAppBrowser) {
 
     this.loader = this.loadingCtrl.create({
           content: "Loading Meeting Map..."
@@ -43,6 +64,10 @@ export class GoogleMapsComponent {
     });
   }
 
-
+  public openMapsLink(destLatitude, destLongitude){
+    let target = "_blank";
+    let url = "https://www.google.com/maps/search/?api=1&query=" + destLatitude + ',' + destLongitude;
+    this.theInAppBrowser.create(url,target,this.options);
+  }
 
 }

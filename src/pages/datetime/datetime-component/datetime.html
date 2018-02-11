@@ -11,22 +11,24 @@
 
 <ion-content class="outer-content">
 
-  <ion-list>
-    <ion-item>
-      <ion-label>Start Date</ion-label>
-      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
-    </ion-item>
+  <ion-item>
+    <ion-label>Enter Clean Date -> </ion-label>
+    <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="myDate"></ion-datetime>
+  </ion-item>
 
+  <ion-card>
+    <ion-card-header>Clean time in days</ion-card-header>
+    <ion-card-content><h1>{{ getCleanTime() }} days</h1></ion-card-content>
+  </ion-card>
 
-    <ion-item>
-      <ion-label>Start Time</ion-label>
-      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
-    </ion-item>
+  <ion-card>
+    <ion-card-header>Clean time in weeks</ion-card-header>
+    <ion-card-content><h1>{{ getCleanTimeWeeks() }} weeks</h1></ion-card-content>
+  </ion-card>
 
-    <ion-item>
-      <ion-label>Ends</ion-label>
-      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>
-    </ion-item>
-  </ion-list>
+  <ion-card>
+    <ion-card-header>Clean time in years</ion-card-header>
+    <ion-card-content><h1>{{ getCleanTimeYears() }} years</h1></ion-card-content>
+  </ion-card>
 
 </ion-content>
