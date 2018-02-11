@@ -14,7 +14,7 @@ export class ContactComponent {
       hidden : 'no', //Or  'yes'
       clearcache : 'yes',
       clearsessioncache : 'yes',
-      zoom : 'yes',//Android only ,shows browser zoom controls
+      zoom : 'no',//Android only ,shows browser zoom controls
       hardwareback : 'yes',
       mediaPlaybackRequiresUserAction : 'no',
       shouldPauseOnSuspend : 'no', //Android only
