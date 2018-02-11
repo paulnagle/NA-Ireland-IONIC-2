@@ -13,19 +13,15 @@
 
   <ion-list>
     <ion-item>
-      <ion-label>Start Date</ion-label>
-      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
-    </ion-item>
-
-
-    <ion-item>
-      <ion-label>Start Time</ion-label>
-      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+      <ion-label>Enter Clean Date -> </ion-label>
+      <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="myDate"></ion-datetime>
     </ion-item>
 
     <ion-item>
-      <ion-label>Ends</ion-label>
-      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>
+      <ion-label text-wrap>Your clean time in days is  :  {{ getCleanTime() }} days</ion-label><br>
+      <ion-label text-wrap>Your clean time in weeks is :  {{ getCleanTimeWeeks() }} weeks</ion-label><br>
+      <ion-label text-wrap>Your clean time in years is :  {{ getCleanTimeYears() }} years</ion-label><br>
+
     </ion-item>
   </ion-list>
 
