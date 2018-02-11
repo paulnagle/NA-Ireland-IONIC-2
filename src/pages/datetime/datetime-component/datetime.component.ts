@@ -21,7 +21,7 @@ export class DatetimeComponent {
   }
 
   getCleanTime(){
-        var day, hour, minute, seconds;
+        var hour, minute, seconds;
 
         this.cleanTimeInMilliseconds = Date.parse(this.myDate);
         this.cleanTimeInMilliseconds = this.todayInMilliseconds - this.cleanTimeInMilliseconds;

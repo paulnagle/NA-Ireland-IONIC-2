@@ -30,16 +30,8 @@ export class AboutComponent {
 
   }
 
-  public openWithSystemBrowser(url : string){
-      let target = "_system";
-      this.theInAppBrowser.create(url,target,this.options);
-  }
   public openWithInAppBrowser(url : string){
       let target = "_blank";
-      this.theInAppBrowser.create(url,target,this.options);
-  }
-  public openWithCordovaBrowser(url : string){
-      let target = "_self";
       this.theInAppBrowser.create(url,target,this.options);
   }
 

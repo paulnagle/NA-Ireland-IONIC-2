@@ -10,7 +10,7 @@ export class SettingsComponent {
 	language: string;
 
 	constructor(
-		private storage: Storage,
+		private storage: Storage ,
 		private translate: TranslateService
 		){}
 
@@ -32,5 +32,3 @@ export class SettingsComponent {
 	}
 
 }
-
-
