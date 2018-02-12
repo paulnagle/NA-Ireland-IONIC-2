@@ -24,6 +24,7 @@ import { HttpClientModule  } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { JftProvider } from '../providers/jft/jft';
+import { AudioProvider } from '../providers/audio/audio';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { JftProvider } from '../providers/jft/jft';
     MeetingListProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     JftProvider,
-    InAppBrowser
+    InAppBrowser,
+    AudioProvider
     ]
 })
 export class AppModule {}
