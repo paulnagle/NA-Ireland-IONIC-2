@@ -1,7 +1,5 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
@@ -19,8 +17,6 @@ import { MeetinglistModule }  from '../pages/meetinglist/meetinglist.module';
 import { JustfortodayModule } from '../pages/justfortoday/justfortoday.module';
 import { SpeakersModule }     from '../pages/speakers/speakers.module';
 import { MeetingListProvider } from '../providers/meeting-list/meeting-list';
-
-import { HttpClientModule  } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { JftProvider } from '../providers/jft/jft';

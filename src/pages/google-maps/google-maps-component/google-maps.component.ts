@@ -49,7 +49,7 @@ export class GoogleMapsComponent {
   public openMapsLink(destLatitude, destLongitude) {
     // ios
     if (this.plt.is('ios')) {
-      window.open('maps://&daddr=' + destLatitude + ',' + destLongitude, '_system');
+      window.open('https://www.google.com/maps/search/?api=1&query=' + destLatitude + ',' + destLongitude + ')', '_system');
     };
     // android
     if (this.plt.is('android')) {

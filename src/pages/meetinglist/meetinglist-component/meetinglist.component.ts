@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { MeetingListProvider } from '../../../providers/meeting-list/meeting-list';
 
-import { NavController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 
 @Component({
@@ -96,7 +95,7 @@ export class MeetinglistComponent {
   public openMapsLink(destLatitude, destLongitude) {
     // ios
     if (this.plt.is('ios')) {
-      window.open('maps://&daddr=' + destLatitude + ',' + destLongitude, '_system');
+      window.open('https://www.google.com/maps/search/?api=1&query=' + destLatitude + ',' + destLongitude + ')', '_system');
     };
     // android
     if (this.plt.is('android')) {

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavParams, LoadingController } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-import { SocialSharing } from '@ionic-native/social-sharing';
 
 import { WordpressService } from '../shared/services/wordpress.service';
 
@@ -18,8 +17,7 @@ export class WordpressPost {
 			private navParams: NavParams,
 			private wordpressService: WordpressService,
 			private loadingController: LoadingController,
-			private iab: InAppBrowser,
-			private socialSharing: SocialSharing
+			private iab: InAppBrowser
 		) {
 		if (navParams.get('post')) {
 			this.post = navParams.get('post');
@@ -28,8 +26,8 @@ export class WordpressPost {
 			 	this.comments = this.post["_embedded"].replies[0];
 			}
 		}
-		if (navParams.get('id')) {
-			this.getPost(navParams.get('id'));
+		if (this.navParams.get('id')) {
+			this.getPost(this.navParams.get('id'));
 		}
 	}
 
@@ -56,12 +54,6 @@ export class WordpressPost {
 		browser.show();
 	}
 
-	sharePost() {
-		let subject = this.post.title.rendered;
-		let message = this.post.content.rendered;
-		message = message.replace(/(<([^>]+)>)/ig,"");
-		let url = this.post.link;
-		this.socialSharing.share(message, subject, '', url);	
-	}
+
 
 }

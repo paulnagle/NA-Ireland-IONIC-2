@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
 
 import { WordpressService } from '../shared/services/wordpress.service';
 import { WordpressPost } from '../wordpress-post/wordpress-post.component';
@@ -9,7 +8,7 @@ import { WordpressPost } from '../wordpress-post/wordpress-post.component';
 	templateUrl: './wordpress-posts.html',
 	providers: [ WordpressService ]
 })
-export class WordpressPosts implements OnInit {
+export class WordpressPosts {
 
 	posts: any;
 	pageCount: number;
@@ -25,8 +24,7 @@ export class WordpressPosts implements OnInit {
 		private wordpressService: WordpressService,
 		private navController: NavController,
 		private loadingController: LoadingController,
-		private toastController: ToastController,
-		private storage: Storage) {}
+		private toastController: ToastController) {}
 
 	ngOnInit() {
 		this.category = this.navParams.get('category');
@@ -35,12 +33,7 @@ export class WordpressPosts implements OnInit {
 		this.hideSearchbar = true;
 		this.search = '';
 		this.favoritePosts = [];
-	    this.storage.get('wordpress.favorite')
-	    .then(data => {
-	        if(data) {
-	        	this.favoritePosts = JSON.parse(data);
-	        }
-	    });
+
 		this.getPosts();
 	}
 
@@ -86,7 +79,7 @@ export class WordpressPosts implements OnInit {
 		this.wordpressService.getPosts(query)
 		.subscribe(result => {
 			infiniteScroll.complete();
-			if(result.length < 1) { 
+			if(result.length < 1) {
 				infiniteScroll.enable(false);
 				toast.present();
 			} else {
@@ -103,29 +96,6 @@ export class WordpressPosts implements OnInit {
 		});
 	}
 
-	favoritePost(post) {
-	    let newPost:Boolean = true;
-	    let message:string;
-
-	    this.favoritePosts.forEach(favPost => {
-			if(JSON.stringify(favPost) === JSON.stringify(post)) {
-				newPost = false;
-			}
-	    });
-	    
-	    if(newPost) {
-			this.favoritePosts.push(post);
-			this.storage.set('wordpress.favorite', JSON.stringify(this.favoritePosts));
-			message = "This post has been saved to your list";
-	    } else {
-	    	message = "This post is already in your list";
-	    }
-		let toast = this.toastController.create({
-			message: message,
-            duration: 2000
-		});
-	    toast.present();
-	}
 
 	toggleSearchbar() {
 		this.hideSearchbar = !this.hideSearchbar;
@@ -137,9 +107,9 @@ export class WordpressPosts implements OnInit {
 	if(this.search) {
 	 	query['search'] = this.search;
 	}
-	if(this.category) {
-		query['categories'] = this.category.id;
-	}
+	// if(this.category) {
+		query['categories'] = 9;
+	// }
 	if(this.tag) {
 		query['tags'] = this.tag.id;
 	}

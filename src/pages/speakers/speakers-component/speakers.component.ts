@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
 import { Platform } from 'ionic-angular';
 import { AudioProvider } from '../../../providers/audio/audio';
 import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser';
