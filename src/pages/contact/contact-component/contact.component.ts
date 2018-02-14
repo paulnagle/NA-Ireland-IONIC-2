@@ -28,7 +28,7 @@ export class ContactComponent {
   };
 
   email: {subject: string, body: string} = {
-    subject: '',
+    subject: 'Message from NA Ireland App',
     body: ''
   };
 

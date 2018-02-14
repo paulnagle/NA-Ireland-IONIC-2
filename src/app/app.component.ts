@@ -65,16 +65,8 @@ export class MyApp {
 	initializeApp() {
 		this.platform.ready().then(() => {
 			this.statusBar.styleDefault();
-			this.hideSplashScreen();
+			this.splashScreen.hide();
 		});
-	}
-
-	hideSplashScreen() {
-		if (this.splashScreen) {
-			setTimeout(() => {
-				this.splashScreen.hide();
-			}, 100);
-		}
 	}
 
 	openPage(page) {

@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { LoadingController } from 'ionic-angular';
 import { JftProvider } from '../../../providers/jft/jft';
 
-import { NavController } from 'ionic-angular';
-
 @Component({
   selector: 'page-justfortoday',
   templateUrl: 'justfortoday.html'
