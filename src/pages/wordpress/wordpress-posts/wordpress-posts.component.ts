@@ -63,39 +63,11 @@ export class WordpressPosts {
     	this.getPosts();
 	}
 
-	loadMore(infiniteScroll) {
-		this.pageCount++;
-
-		let query = this.createQuery();
-	  	let loader = this.loadingController.create({
-			content: "Please wait"
-		});
-		let toast = this.toastController.create({
-			message: "There are no more posts.",
-      duration: 2000
-		});
-
-		loader.present();
-		this.wordpressService.getPosts(query)
-		.subscribe(result => {
-			infiniteScroll.complete();
-			if(result.length < 1) {
-				infiniteScroll.enable(false);
-				toast.present();
-			} else {
-				this.posts = this.posts.concat(result);
-			}
-		},
-		error => console.log(error),
-    () => loader.dismiss());
-	}
-
 	loadPost(post) {
 		this.navController.push(WordpressPost, {
 			post: post
 		});
 	}
-
 
 	toggleSearchbar() {
 		this.hideSearchbar = !this.hideSearchbar;
