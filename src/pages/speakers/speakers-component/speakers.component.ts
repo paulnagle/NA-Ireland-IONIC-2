@@ -38,7 +38,8 @@ export class SpeakersComponent {
                private theInAppBrowser: InAppBrowser )  {
 
     this.loader = this.loadingCtrl.create({
-    content: "Loading Speakers List..."
+      content: "Loading Speakers List...",
+      duration: 10000
     });
     this.loader.present();
     this.getAllSpeakers();

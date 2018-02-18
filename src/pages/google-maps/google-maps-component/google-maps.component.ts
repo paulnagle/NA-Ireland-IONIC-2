@@ -16,7 +16,8 @@ export class GoogleMapsComponent {
               public plt: Platform) {
 
     this.loader = this.loadingCtrl.create({
-          content: "Loading Meeting Map..."
+          content: "Loading Meeting Map...",
+          duration: 10000
         });
     this.loader.present();
 
@@ -43,16 +44,6 @@ export class GoogleMapsComponent {
       this.meetingList  = this.meetingList.filter(meeting => meeting.weekday_tinyint = this.dayOfWeekAsString(meeting.weekday_tinyint));
 
       this.loader.dismiss();
-<<<<<<< HEAD
-    }, (errorResponse: any) =>{
-      this.loader.dismiss();
-      this.loader = this.loadingCtrl.create({
-            content: "Map load Timed out",
-            duration: 5000
-          });
-      this.loader.present();
-=======
->>>>>>> parent of 1adeb60... Timeout for map load
     });
   }
 

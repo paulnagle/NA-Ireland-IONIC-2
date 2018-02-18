@@ -84,7 +84,8 @@ export class MeetinglistComponent {
               public plt: Platform) {
 
     this.loader = this.loadingCtrl.create({
-          content: "Loading Meeting List..."
+          content: "Loading Meeting List...",
+          duration: 10000
         });
     this.loader.present();
 

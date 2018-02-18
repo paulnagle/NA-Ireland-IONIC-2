@@ -15,24 +15,21 @@ export class JustfortodayComponent {
 
   constructor(private JftProvider : JftProvider , public loadingCtrl: LoadingController) {
     this.loader = this.loadingCtrl.create({
-          content: "Loading Just For Today..."
+          content: "Loading Just For Today...",
+          duration: 10000
         });
     this.loader.present();
     this.getJFT();
   }
 
   getJFT(){
-    this
-      .JftProvider
+    this.JftProvider
       .getJFT()
-      .timeout(10000)
       .subscribe((data)=>{
-        this.jft = data;
-        this.loader.dismiss();
-      }, (errorResponse: any) =>{
-        this.jft = "Timed out after 10 seconds. Check internet connection?";
-        this.loader.dismiss();
-      });
+          this.jft = data;
+          this.loader.dismiss();
+        }
+      );
   }
 
 }
