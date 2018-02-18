@@ -2,9 +2,11 @@
 
 Example commands to build a git clone of this app (on a mac)
 
-Download the NA-Ireland-Ionic-2-master.zip file, extract it and cd into the directory.
+Download the NA-Ireland-Ionic-2-master.zip file... 
 
 https://github.com/paulnagle/NA-Ireland-Ionic-2/archive/master.zip
+
+Unzip the zip file and cd into the directory that is created
 
 Install Ionic Framework (For more details see https://ionicframework.com/) 
 ```
@@ -60,3 +62,4 @@ $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-ke
 
 $ /Users/paulnagle/Development/sdk/build-tools/21.1.2/zipalign -v 4 android-release-unsigned.apk NAIreland.apk
 ```
+You can then submit the app to the appstore.
