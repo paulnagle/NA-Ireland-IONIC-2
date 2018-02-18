@@ -3,7 +3,6 @@ import { Platform } from 'ionic-angular';
 import { MeetingListProvider } from '../../../providers/meeting-list/meeting-list';
 
 import { LoadingController } from 'ionic-angular';
-import 'rxjs/add/operator/timeout';
 
 @Component({
   selector: 'page-meetinglist',
@@ -86,7 +85,7 @@ export class MeetinglistComponent {
 
     this.loader = this.loadingCtrl.create({
           content: "Loading Meeting List...",
-          duration: 15000
+          duration: 10000
         });
     this.loader.present();
 
@@ -202,10 +201,7 @@ export class MeetinglistComponent {
   isWicklowShown(group) { return this.shownWicklow === group; };
 
   getAllMeetings(){
-    this.MeetingListProvider
-        .getMeetings()
-        .timeout(15000)
-        .subscribe((data)=>{
+    this.MeetingListProvider.getMeetings().subscribe((data)=>{
       this.meetingList   = data;
       this.AntrimList    = this.meetingList.filter(meeting => meeting.location_sub_province == "Antrim");
       this.ArmaghList    = this.meetingList.filter(meeting => meeting.location_sub_province == "Armagh");
@@ -241,13 +237,6 @@ export class MeetinglistComponent {
       this.WicklowList   = this.meetingList.filter(meeting => meeting.location_sub_province == "Wicklow");
 
       this.loader.dismiss();
-    }, (errorResponse: any) =>{
-      this.loader.dismiss();
-      this.loader = this.loadingCtrl.create({
-              content: "Request timed out",
-              duration: 5000
-            });
-      this.loader.present();
     });
   }
 }

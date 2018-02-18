@@ -67,14 +67,14 @@
   "description": "NA Ireland",
   "cordova": {
     "platforms": [
-      "ios",
-      "android"
+      "android",
+      "ios"
     ],
     "plugins": {
+      "cordova-plugin-inappbrowser": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-statusbar": {},
-      "cordova-plugin-whitelist": {},
-      "cordova-plugin-inappbrowser": {}
+      "cordova-plugin-whitelist": {}
     }
   }
 }
