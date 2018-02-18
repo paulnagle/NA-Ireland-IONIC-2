@@ -52,7 +52,8 @@ $ ionic platforms add android
 
 $ ionic build android --release --prod
 ```
-(make use of the android-armv7* in case of crosswalk usage)
+
+To sign the app for apppstore submission
 ```
 $ cd platforms/android/build/outputs/apk/
 
