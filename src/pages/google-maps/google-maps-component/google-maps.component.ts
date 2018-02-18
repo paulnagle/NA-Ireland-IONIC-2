@@ -3,8 +3,6 @@ import { LoadingController } from 'ionic-angular';
 import { Platform } from 'ionic-angular';
 import { MeetingListProvider } from '../../../providers/meeting-list/meeting-list';
 
-import 'rxjs/add/operator/timeout';
-
 @Component({
   templateUrl: 'google-maps.html'
 })
@@ -18,8 +16,7 @@ export class GoogleMapsComponent {
               public plt: Platform) {
 
     this.loader = this.loadingCtrl.create({
-          content: "Loading Meeting Map...",
-          duration: 15000
+          content: "Loading Meeting Map..."
         });
     this.loader.present();
 
@@ -38,10 +35,7 @@ export class GoogleMapsComponent {
   }
 
   getAllMeetings(){
-    this.MeetingListProvider
-        .getMeetings()
-        .timeout(15000)
-        .subscribe((data)=>{
+    this.MeetingListProvider.getMeetings().subscribe((data)=>{
       this.meetingList  = data;
       this.meetingList  = this.meetingList.filter(meeting => meeting.latitude = parseFloat(meeting.latitude));
       this.meetingList  = this.meetingList.filter(meeting => meeting.longitude = parseFloat(meeting.longitude));
@@ -49,6 +43,7 @@ export class GoogleMapsComponent {
       this.meetingList  = this.meetingList.filter(meeting => meeting.weekday_tinyint = this.dayOfWeekAsString(meeting.weekday_tinyint));
 
       this.loader.dismiss();
+<<<<<<< HEAD
     }, (errorResponse: any) =>{
       this.loader.dismiss();
       this.loader = this.loadingCtrl.create({
@@ -56,6 +51,8 @@ export class GoogleMapsComponent {
             duration: 5000
           });
       this.loader.present();
+=======
+>>>>>>> parent of 1adeb60... Timeout for map load
     });
   }
 
