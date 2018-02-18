@@ -52,7 +52,7 @@ export class GoogleMapsComponent {
     }, (errorResponse: any) =>{
       this.loader.dismiss();
       this.loader = this.loadingCtrl.create({
-            content: "Mao load Timed out",
+            content: "Map load Timed out",
             duration: 5000
           });
       this.loader.present();

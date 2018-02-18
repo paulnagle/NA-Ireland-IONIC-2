@@ -73,8 +73,8 @@
     "plugins": {
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-statusbar": {},
-      "cordova-plugin-inappbrowser": {},
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-inappbrowser": {}
     }
   }
 }
