@@ -4,8 +4,6 @@ import { NavController, NavParams, LoadingController, ToastController } from 'io
 import { WordpressService } from '../shared/services/wordpress.service';
 import { WordpressPost } from '../wordpress-post/wordpress-post.component';
 
-import 'rxjs/add/operator/timeout';
-
 @Component({
 	templateUrl: './wordpress-posts.html',
 	providers: [ WordpressService ]
@@ -50,19 +48,19 @@ export class WordpressPosts {
 
 		loader.present();
 		this.wordpressService.getPosts(query)
-		.timeout(10000)
 		.subscribe(result => {
 			this.posts = result;
 			loader.dismiss();
-		} , (errorResponse: any) =>{
-			console.log ("Timed out after 10 seconds. Check internet connection?");
-			loader.dismiss();
-			loader = this.loadingController.create({
-				content: "Request timed out?",
-				duration: 5000
-			});
-			loader.present();
 		});
+	}
+
+	getAuthorPosts(author) {
+		this.author = author;
+		this.getPosts();
+	}
+
+	searchPosts() {
+    	this.getPosts();
 	}
 
 	loadPost(post) {
@@ -71,11 +69,25 @@ export class WordpressPosts {
 		});
 	}
 
-	createQuery() {
-		let query = {};
-		query['page'] = this.pageCount;
-		query['categories'] = 9;
-		return query;
+	toggleSearchbar() {
+		this.hideSearchbar = !this.hideSearchbar;
 	}
 
+	createQuery() {
+	let query = {};
+	query['page'] = this.pageCount;
+	if(this.search) {
+	 	query['search'] = this.search;
+	}
+	// if(this.category) {
+		query['categories'] = 9;
+	// }
+	if(this.tag) {
+		query['tags'] = this.tag.id;
+	}
+	if(this.author) {
+		query['author'] = this.author;
+	}
+	return query;
+	}
 }
