@@ -3,15 +3,13 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../app/shared/shared.module';
 import { WordpressPosts } from './wordpress-posts/wordpress-posts.component';
 import { WordpressPost } from './wordpress-post/wordpress-post.component';
-import { WordpressFeatureMedia } from './wordpress-feature-media/wordpress-feature-media.component';
 
 
 
 @NgModule({
   declarations: [
     WordpressPosts,
-    WordpressPost,
-    WordpressFeatureMedia
+    WordpressPost
   ],
   imports: [
   	CommonModule,
@@ -19,13 +17,11 @@ import { WordpressFeatureMedia } from './wordpress-feature-media/wordpress-featu
   ],
   exports: [
     WordpressPosts,
-    WordpressPost,
-    WordpressFeatureMedia
+    WordpressPost
   ],
   entryComponents:[
   	WordpressPosts,
-    WordpressPost,
-    WordpressFeatureMedia
+    WordpressPost
   ]
 })
 export class WordpressModule {}
