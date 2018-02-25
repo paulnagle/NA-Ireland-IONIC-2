@@ -90,7 +90,7 @@ export class MeetinglistComponent {
     this.loader.present();
 
     this.getAllMeetings();
-
+    
   }
 
   public openMapsLink(destLatitude, destLongitude) {
