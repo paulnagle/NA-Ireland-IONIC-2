@@ -3,6 +3,7 @@ import { Platform } from 'ionic-angular';
 import { AudioProvider } from '../../../providers/audio/audio';
 import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser';
 import { LoadingController } from 'ionic-angular';
+import { Insomnia } from '@ionic-native/insomnia';
 
 @Component({
   selector: 'page-speakers',
@@ -35,7 +36,8 @@ export class SpeakersComponent {
   constructor (private AudioProvider : AudioProvider,
                public loadingCtrl: LoadingController,
                public plt: Platform,
-               private theInAppBrowser: InAppBrowser )  {
+               private theInAppBrowser: InAppBrowser,
+               private insomnia: Insomnia )  {
 
     this.loader = this.loadingCtrl.create({
       content: "Loading Speakers List...",
@@ -56,7 +58,14 @@ export class SpeakersComponent {
 
   public openWithInAppBrowser(url : string){
       let target = "_blank";
-      this.theInAppBrowser.create(url,target,this.options);
+      const browser = this.theInAppBrowser.create(url, target, this.options);
+      this.insomnia.keepAwake();
+      browser.on('exit').subscribe((ev)=>{
+        this.insomnia.allowSleepAgain();
+      });
+
+      browser.show();
+
   }
 
 }
