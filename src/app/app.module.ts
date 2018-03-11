@@ -21,6 +21,7 @@ import { MeetingListProvider } from '../providers/meeting-list/meeting-list';
 import { MyApp } from './app.component';
 import { JftProvider } from '../providers/jft/jft';
 import { AudioProvider } from '../providers/audio/audio';
+import { Insomnia } from '@ionic-native/insomnia';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { AudioProvider } from '../providers/audio/audio';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     JftProvider,
     InAppBrowser,
-    AudioProvider
+    AudioProvider,
+    Insomnia
     ]
 })
 export class AppModule {}
