@@ -14,7 +14,7 @@ import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
   	CommonModule,
   	SharedModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyA9aj3-17cojks6gicZZ_PY2t5ERVu25ac'
+      apiKey: 'AIzaSyAtwUjsIB14f0aHgdLk_JYnUrI0jvczMXw'
     }),
     AgmJsMarkerClustererModule
   ],

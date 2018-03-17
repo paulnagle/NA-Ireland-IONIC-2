@@ -16,7 +16,7 @@ export class SpeakersComponent {
       hidden : 'no', //Or  'yes'
       clearcache : 'yes',
       clearsessioncache : 'yes',
-      zoom : 'no',//Android only ,shows browser zoom controls
+      zoom : 'yes',//Android only ,shows browser zoom controls
       hardwareback : 'yes',
       mediaPlaybackRequiresUserAction : 'no',
       shouldPauseOnSuspend : 'yes', //Android only
