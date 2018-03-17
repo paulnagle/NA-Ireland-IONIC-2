@@ -10,7 +10,6 @@ import { TabsModule } from '../pages/tabs/tabs.module';
 import { GoogleMapsModule } from '../pages/google-maps/google-maps.module';
 import { WordpressModule } from '../pages/wordpress/wordpress.module';
 import { SettingsModule } from '../pages/settings/settings.module';
-import { AboutModule } from '../pages/about/about.module';
 import { ContactModule } from '../pages/contact/contact.module';
 import { DatetimeModule } from '../pages/datetime/datetime.module';
 import { MeetinglistModule }  from '../pages/meetinglist/meetinglist.module';
@@ -35,7 +34,6 @@ import { Insomnia } from '@ionic-native/insomnia';
     GoogleMapsModule,
     WordpressModule,
     SettingsModule,
-    AboutModule,
     ContactModule,
     DatetimeModule,
     JustfortodayModule,
