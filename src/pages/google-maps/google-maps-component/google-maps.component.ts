@@ -46,15 +46,28 @@ export class GoogleMapsComponent {
       //check to see if any of the  markers overlap.. meetings are sorted by long first, then lat
       // If lat/longs overlap, move one by a couple of meters
       var i : any;
-      for (i=0; i < this.meetingList.length -1; i++) {
-
-          if (this.meetingList[i].longitude == this.meetingList[i+1].longitude) {
-            if (this.meetingList[i].latitude == this.meetingList[i+1].latitude){
-              this.meetingList[i].longitude = this.meetingList[i].longitude  + (Math.random() -.8) / 1500;
-              this.meetingList[i].latitude = this.meetingList[i].latitude  + (Math.random() -.8) / 1500;
-            }
+      for (i = 0; i < this.meetingList.length - 1; i++) {
+        var longOffset : any = 0;
+        var latOffset : any = 0;
+        var Offset : any = 0.00002;
+        // maybe use :- https://github.com/TopicFriends/TopicFriends/commit/d6c61ae976eb1473b314bd804cebacd5106dac37
+        while ((this.meetingList[i].longitude == this.meetingList[i+1].longitude) &&
+               (this.meetingList[i].latitude == this.meetingList[i+1].latitude) ){
+          if ( (i % 2) === 1) {
+            longOffset += Offset;
+            this.meetingList[i].longitude = this.meetingList[i].longitude  + longOffset;
+          } else {
+            latOffset += Offset;
+            this.meetingList[i].latitude = this.meetingList[i].latitude  + latOffset;
           }
-      }
+          i++;
+          if (i == (this.meetingList.length - 1)) {
+            longOffset = 0;
+            latOffset = 0;
+            break;
+          }
+        } // while
+      } // for
 
       this.loader.dismiss();
     });
