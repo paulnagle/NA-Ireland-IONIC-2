@@ -21,6 +21,7 @@ import { MyApp } from './app.component';
 import { JftProvider } from '../providers/jft/jft';
 import { AudioProvider } from '../providers/audio/audio';
 import { Insomnia } from '@ionic-native/insomnia';
+import { ServiceGroupsProvider } from '../providers/service-groups/service-groups';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { Insomnia } from '@ionic-native/insomnia';
     JftProvider,
     InAppBrowser,
     AudioProvider,
-    Insomnia
+    Insomnia,
+    ServiceGroupsProvider
     ]
 })
 export class AppModule {}
