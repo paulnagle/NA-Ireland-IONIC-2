@@ -10,7 +10,7 @@ export class MeetingListProvider {
     console.log('Hello MeetingListProvider Provider');
   }
 
-  getApiUrl : string = "https://bmlt.nasouth.ie/main_server/client_interface/json/?switcher=GetSearchResults&data_field_key=weekday_tinyint,start_time,longitude,latitude,meeting_name,location_text,location_info,location_street,location_sub_province,formats&sort_keys=location_sub_province,weekday_tinyint,start_time";
+  getApiUrl : string = "https://bmlt.nasouth.ie/main_server/client_interface/json/?switcher=GetSearchResults&sort_keys=longitude,latitude";
 
   getMeetings() {
     return this.http.get(this.getApiUrl);
